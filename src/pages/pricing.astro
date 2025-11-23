@@ -4,102 +4,93 @@ import Layout from '~/layouts/PageLayout.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
 const metadata = {
-  title: "Pricing",
+  title: 'Pricing',
 };
 ---
 
 <Layout metadata={metadata}>
   <Pricing
-    title="Basic Pricing"
+    title="Brigade Pricing"
     tagline="Pricing"
-    subtitle="Our prices"
+    subtitle="Simple pricing for individual brigades. One plan with everything included. Choose monthly or save with annual billing."
     prices={[
       {
-        "title": "basic",
-        "price": 29,
-        "period": "Per Month",
-        "items": [
+        title: 'Monthly',
+        price: 16,
+        period: 'per month',
+        items: [
           {
-            "description": "Etiam in libero",
-            "icon": "tabler:check"
+            description: 'All features included',
+            icon: 'tabler:check',
           },
           {
-            "description": "Aenean ac nunc",
-            "icon": "tabler:check"
+            description: 'Unlimited users',
+            icon: 'tabler:check',
           },
           {
-            "description": "Cras scelerisque accumsan libero, et volutpat dolor tristique at",
-            "icon": "tabler:check"
+            description: 'Unlimited inspections',
+            icon: 'tabler:check',
           },
           {
-            "description": "In hac habitasse",
-            "icon": "tabler:check"
-          }
+            description: 'Email support',
+            icon: 'tabler:check',
+          },
+          {
+            description: 'Cancel anytime',
+            icon: 'tabler:check',
+          },
         ],
-        "callToAction": {
-          "targetBlank": true,
-          "text": "Free 7-day trial",
-          "href": "#"
-        }
       },
       {
-        "title": "standard",
-        "price": 69,
-        "period": "Per Month",
-        "items": [
+        title: 'Annual',
+        price: 176,
+        period: 'per year',
+        items: [
           {
-            "description": "Proin vel laoreet",
-            "icon": "tabler:check"
+            description: 'All features included',
+            icon: 'tabler:check',
           },
           {
-            "description": "Ut efficitur egestas",
-            "icon": "tabler:check"
+            description: 'Unlimited users',
+            icon: 'tabler:check',
           },
           {
-            "description": "Pellentesque ut nibh",
-            "icon": "tabler:check"
+            description: 'Unlimited inspections',
+            icon: 'tabler:check',
           },
           {
-            "description": "Donec fringilla sem",
-            "icon": "tabler:check"
-          }
+            description: 'Email support',
+            icon: 'tabler:check',
+          },
+          {
+            description: 'Cancel anytime',
+            icon: 'tabler:check',
+          },
         ],
-        "callToAction": {
-          "targetBlank": true,
-          "text": "Free 15-day trial",
-          "href": "#"
-        },
-        "hasRibbon": true,
-        "ribbonTitle": "popular"
+        hasRibbon: true,
+        ribbonTitle: 'Save $16',
       },
-      {
-        "title": "premium",
-        "price": 199,
-        "period": "Per Month",
-        "items": [
-          {
-            "description": "Curabitur suscipit risus",
-            "icon": "tabler:check"
-          },
-          {
-            "description": "Aliquam blandit malesuada",
-            "icon": "tabler:check"
-          },
-          {
-            "description": "Suspendisse sit amet",
-            "icon": "tabler:check"
-          },
-          {
-            "description": "Suspendisse auctor dui",
-            "icon": "tabler:check"
-          }
-        ],
-        "callToAction": {
-          "targetBlank": true,
-          "text": "Free 30-day trial",
-          "href": "#"
-        }
-      }
     ]}
   />
+
+  <div class="text-center mt-12 mb-16 max-w-2xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
+    <p class="text-lg text-muted mb-8">
+      We offer a free 30-day trial with all new subscriptions. We can even help onboard your brigade for free to get you
+      up and running quickly.
+    </p>
+    <a href="https://app.stationone.com.au/register" class="btn btn-primary text-lg px-8 py-3"> Get Started</a>
+  </div>
+
+  <div class="bg-blue-50 dark:bg-slate-800 py-16">
+    <div class="text-center max-w-3xl mx-auto px-4">
+      <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2">Enterprise</p>
+      <h2 class="text-4xl font-bold mb-4">Organisation Pricing</h2>
+      <p class="text-lg text-muted dark:text-slate-400 mb-8">
+        Looking to deploy StationOne across all brigades or units in your organisation? We offer enterprise contracts
+        with custom pricing tailored to your needs.
+      </p>
+      <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us for Pricing</a>
+    </div>
+  </div>
 </Layout>
