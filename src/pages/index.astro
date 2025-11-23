@@ -14,7 +14,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: "StationOne - Streamline your firefighting operations.",
+  title: 'StationOne - Streamline your firefighting operations.',
   dontUseTitleTemplate: true,
 };
 ---
@@ -23,17 +23,19 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Sign Up', href: '/signup', icon: 'tabler:firetruck' }}
+    callToAction={{ text: 'Sign Up', href: 'https://app.stationone.com.au/register', icon: 'tabler:firetruck' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
     image={{ src: import('~/assets/images/hero-image.png'), alt: 'StationOne Hero Image' }}
   >
     <Fragment slot="title">
       Streamline your
-      <span class="text-secondary dark:text-white highlight"> firefighting</span> operations with StationOne   </Fragment>
+      <span class="text-secondary dark:text-white highlight"> firefighting</span> operations with StationOne
+    </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">StationOne</span> empowers firefighters by providing them with a digital platform that enhances their efficiency, safety, organisation, and access to information.</span
+        <span class="font-semibold">StationOne</span> empowers firefighters by providing them with a digital platform
+        that enhances their efficiency, safety, organisation, and access to information.</span
       >
     </Fragment>
   </Hero>
@@ -117,8 +119,11 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Critical information when you need it</h3>
-      Building comprehensive pre-plans with business, property and other stakeholders allows stationone to arm first responders with live real-time situational intelligence before, during and after any incident. 
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Critical information when you need it
+      </h3>
+       Building comprehensive pre-plans with business, property and other stakeholders allows stationone to arm first
+      responders with live real-time situational intelligence before, during and after any incident.
     </Fragment>
   </Content>
 
@@ -153,46 +158,53 @@ const metadata = {
       src: import('~/assets/images/ff-02.png'),
       alt: 'Vintage Image',
     }}
-    >
+  >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Collaborate with your community</h3>
-      Community Hub enables first responders to obtain valuable information about private and it risk residence.<br>Residents can add information to their property portfolio empowering local property owners to assist in hazard assessment and response capabilities. 
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Collaborate with your community
+      </h3>
+       Community Hub enables first responders to obtain valuable information about private and it risk residence.<br
+      />Residents can add information to their property portfolio empowering local property owners to assist in hazard
+      assessment and response capabilities.
     </Fragment>
-    </Content>
+  </Content>
 
-    <Content
-    tagline="Be Informed"
-    title="Size Up"
+  <Content
+    tagline="Stay Compliant"
+    title="Inspections"
     items={[
       {
-        title: 'LiDAR Technology',
+        title: 'Vehicle & Equipment Inspections',
         description:
-          'Size Up leverages your device LiDAR Sensors to scan the incident scene, coupled with AI to process the data and paint a realistic overview of the incident scene.',
+          'Perform routine inspections on vehicles and equipment with customisable checklists, ensuring everything is ready when you need it most.',
       },
       {
-        title: 'Leverage your pre-plans',
+        title: 'QR Code Access',
         description:
-          'StationOne will leverage data about the site that may be captured in incident pre-plans or CommunityHub and pair this with realtime data obtained on scene.',
+          'Complete inspections via our public inspection system accessible through QR codes, making it easy to log checks from any device.',
       },
       {
-        title: 'Make Strategic Decisions',
+        title: 'Analytics & Reporting',
         description:
-          'Combine all your data together to make strategic decisions to combat the incident, knowing all other crews responding to the incident have the same information in real-time.',
+          'Access detailed analytics, schedules and reporting through a comprehensive inspections dashboard to track compliance and identify issues.',
       },
     ]}
     image={{
-      src: import('~/assets/images/sizeup.png'),
-      alt: 'Colorful Image',
+      src: import('~/assets/images/truck_inspection.jpg'),
+      alt: 'Fire truck equipment inspection',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Provide a detailed incident overview</h3>
-      Leverage LiDAR and AI Technology to scan an incident scene and dynamically build your size up, recognise hazards, obtain measurements, flag exposures and share the size up with your crew in real time. 
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Streamline your inspection workflows
+      </h3>
+       Manage all your inspections in one place - from vehicles and equipment to hydrants and hose assets. Schedule
+      routine checks, track completion rates, and generate compliance reports with ease.
     </Fragment>
   </Content>
 
   <!-- Steps Widget ****************** -->
-<!--
+  <!--
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
     items={[
@@ -227,91 +239,100 @@ const metadata = {
   -->
 
   <CallToAction
-    id='signup'
+    id="feedback"
     callToAction={{
-      text: 'Sign Up',
-      href: '/signup',
-      icon: 'tabler:firetruck',
-      //id='signup'
+      text: 'View Roadmap',
+      href: 'https://stationone.canny.io/',
+      icon: 'tabler:map',
     }}
   >
     <Fragment slot="title">
-      Join our <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">waitlist</span>
+      Have an <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">idea?</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      StationOne is still under active development, we are working hard to make our initial release available soon. <br><br>Join our waitlist to receive early access and updates about our initial release.
+      We're always looking to improve StationOne. Submit a feature request or view our public roadmap to see what's
+      coming next.
     </Fragment>
   </CallToAction>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features2 Widget - Available Today ************** -->
 
   <Features2
-    title="StationOne Features"
-    subtitle="StationOne offers a range of features and tools to assist firefighters in both daily operations and while managing large-scale complex incidents."
+    title="Available Today"
+    subtitle="These features are live and ready to use in StationOne."
     tagline="Features"
     id="details"
     items={[
       {
-        title: 'Pre-Plans',
-        description:
-          'Develop, share and collaborate on pre-plans for significant risks.',
-        icon: 'flat-color-icons:reading-ebook',
-      },
-      {
-        title: 'Community Hub',
-        description:
-          'Engage with the community to ensure they are fire safe and prepared.',
-        icon: 'flat-color-icons:home',
-      },
-      {
-        title: 'Size Up',
-        description:
-          'Use LiDAR and AI Technology to perform an incident size up and share with your crews.',
-        icon: 'flat-color-icons:process',
-      },
-      {
         title: 'Water Points',
-        description:
-          'Locate static water sources, maintained by fire stations and property owners.',
+        description: 'Locate static water sources, maintained by fire stations and property owners.',
         icon: 'flat-color-icons:collect',
       },
       {
         title: 'Hose Manager',
-        description:
-          'Manage your hose inventory including full service history and locations.',
+        description: 'Manage your hose inventory including full service history and locations.',
         icon: 'flat-color-icons:neutral-trading',
       },
       {
         title: 'Inventory',
-        description:
-          'Equipment inventory, auditing and fault reporting.',
+        description: 'Equipment inventory, auditing and fault reporting.',
         icon: 'flat-color-icons:survey',
       },
       {
-        title: 'Radio Simulator',
-        description:
-          'Train new recruits in our advanced radio simulator.',
-        icon: 'flat-color-icons:assistant',
-      },
-      {
         title: 'Crew Manager',
-        description:
-          'Roster and manage duty crews and their tasks or build task forces.',
+        description: 'Roster and manage duty crews and their tasks or build task forces.',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
+        title: 'Calendar',
+        description: 'Manage events, vehicle bookings and training schedules all in one place.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Hydrants',
+        description: 'Map and manage all hydrants in your response area with inspection tracking.',
+        icon: 'tabler:fire-hydrant',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features2 Widget - Roadmap ************** -->
+
+  <Features2
+    title="On Our Roadmap"
+    subtitle="Exciting features we're working on to further enhance StationOne."
+    tagline="Coming Soon"
+    items={[
+      {
+        title: 'Pre-Plans',
+        description: 'Develop, share and collaborate on pre-plans for significant risks.',
+        icon: 'flat-color-icons:reading-ebook',
+      },
+      {
+        title: 'Community Hub',
+        description: 'Engage with the community to ensure they are fire safe and prepared.',
+        icon: 'flat-color-icons:home',
+      },
+      {
+        title: 'Size Up',
+        description: 'Use LiDAR and AI Technology to perform an incident size up and share with your crews.',
+        icon: 'flat-color-icons:process',
+      },
+      {
         title: 'Briefings',
-        description:
-          'Generate and share industry standard briefings electronically.',
+        description: 'Generate and share industry standard briefings electronically.',
         icon: 'flat-color-icons:briefcase',
       },
-      //{
-      //  title: 'Firefighting Tools',
-      //  description:
-      //    'A range of useful tools, checklists and calculators to assist firefighters.',
-      //  icon: 'flat-color-icons:support',
-      //},
+      {
+        title: 'Radio Simulator',
+        description: 'Train new recruits in our advanced radio simulator.',
+        icon: 'flat-color-icons:assistant',
+      },
     ]}
   >
     <Fragment slot="bg">
@@ -377,6 +398,5 @@ const metadata = {
     tagline="Get in Touch"
     title="Contact StationOne"
     subtitle="Do you want to know more about StationOne? Have questions or feedback on StationOne features? Interested in investing? Let's talk!"
-    ></Contact>
-
+  />
 </Layout>
