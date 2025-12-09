@@ -94,36 +94,41 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    tagline="Be prepared"
-    title="Incident Pre-Plans"
+    tagline="Stay Compliant"
+    title="Inspections"
     items={[
       {
-        title: 'Ensure everyone has the same information',
+        title: 'Vehicle & Equipment Inspections',
         description:
-          'All supporting appliances have a real-time, up to date version of the pre-plan providing them vital information en-route to the incident.',
+          'Perform routine inspections on vehicles and equipment with customisable checklists, ensuring everything is ready when you need it most.',
       },
       {
-        title: 'Get an overview of the incident en-route',
+        title: 'QR Code Access',
         description:
-          'Ensure crews are familiar with the site plan, potential exposures, identify utlities isolation and fire service equipment.',
+          'Complete inspections via our public inspection system accessible through QR codes, making it easy to log checks from any device.',
       },
       {
-        title: 'Plan your initial attack',
+        title: 'Stock Control',
         description:
-          'Annotate the location map and share with all appliances en-route, detailing how initial attack crews will enter the premises and manage the incident.',
+          'Manage inventory levels and ensure that all firefighting equipment and supplies are adequately stocked and maintained.',
+      },
+      {
+        title: 'Analytics & Reporting',
+        description:
+          'Access detailed analytics, schedules and reporting through a comprehensive inspections dashboard to track compliance and identify issues.',
       },
     ]}
     image={{
-      src: import('~/assets/images/ff-01.png'),
-      alt: 'Colorful Image',
+      src: import('~/assets/images/truck_inspection.jpg'),
+      alt: 'Fire truck equipment inspection',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Critical information when you need it
+        Streamline your inspection workflows
       </h3>
-       Building comprehensive pre-plans with business, property and other stakeholders allows stationone to arm first
-      responders with live real-time situational intelligence before, during and after any incident.
+       Manage all your inspections in one place - from vehicles and equipment to hydrants and hose assets. Schedule
+      routine checks, track completion rates, and generate compliance reports with ease.
     </Fragment>
   </Content>
 
@@ -170,38 +175,39 @@ const metadata = {
   </Content>
 
   <Content
-    tagline="Stay Compliant"
-    title="Inspections"
+    tagline="Be prepared"
+    title="Incident Pre-Plans"
     items={[
       {
-        title: 'Vehicle & Equipment Inspections',
+        title: 'Ensure everyone has the same information',
         description:
-          'Perform routine inspections on vehicles and equipment with customisable checklists, ensuring everything is ready when you need it most.',
+          'All supporting appliances have a real-time, up to date version of the pre-plan providing them vital information en-route to the incident.',
       },
       {
-        title: 'QR Code Access',
+        title: 'Get an overview of the incident en-route',
         description:
-          'Complete inspections via our public inspection system accessible through QR codes, making it easy to log checks from any device.',
+          'Ensure crews are familiar with the site plan, potential exposures, identify utlities isolation and fire service equipment.',
       },
       {
-        title: 'Analytics & Reporting',
+        title: 'Plan your initial attack',
         description:
-          'Access detailed analytics, schedules and reporting through a comprehensive inspections dashboard to track compliance and identify issues.',
+          'Annotate the location map and share with all appliances en-route, detailing how initial attack crews will enter the premises and manage the incident.',
       },
     ]}
     image={{
-      src: import('~/assets/images/truck_inspection.jpg'),
-      alt: 'Fire truck equipment inspection',
+      src: import('~/assets/images/ff-01.png'),
+      alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Streamline your inspection workflows
+        Critical information when you need it
       </h3>
-       Manage all your inspections in one place - from vehicles and equipment to hydrants and hose assets. Schedule
-      routine checks, track completion rates, and generate compliance reports with ease.
+       Building comprehensive pre-plans with business, property and other stakeholders allows stationone to arm first
+      responders with live real-time situational intelligence before, during and after any incident.
     </Fragment>
   </Content>
+
 
   <!-- Steps Widget ****************** -->
   <!--
@@ -265,27 +271,27 @@ const metadata = {
     id="details"
     items={[
       {
-        title: 'Water Points',
-        description: 'Locate static water sources, maintained by fire stations and property owners.',
-        icon: 'flat-color-icons:collect',
-      },
-      {
         title: 'Hose Manager',
         description: 'Manage your hose inventory including full service history and locations.',
-        icon: 'flat-color-icons:neutral-trading',
+        icon: 'tabler:spiral',
       },
       {
-        title: 'Inventory',
-        description: 'Equipment inventory, auditing and fault reporting.',
-        icon: 'flat-color-icons:survey',
+        title: 'Inspections & Audits',
+        description: 'Equipment inventory, inspections, auditing and fault reporting.',
+        icon: 'tabler:clipboard-list',
       },
       {
-        title: 'Crew Manager',
-        description: 'Roster and manage duty crews and their tasks or build task forces.',
-        icon: 'flat-color-icons:voice-presentation',
+        title: 'Actions & Tasks',
+        description: 'Manage actions and tasks including assignments and progress tracking.',
+        icon: 'tabler:subtask',
       },
       {
-        title: 'Calendar',
+        title: 'Member Management',
+        description: 'Roster and manage crews, maintain qualifications, endorsements and competencies.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Calendar & Events',
         description: 'Manage events, vehicle bookings and training schedules all in one place.',
         icon: 'tabler:calendar-event',
       },
@@ -293,6 +299,11 @@ const metadata = {
         title: 'Hydrants',
         description: 'Map and manage all hydrants in your response area with inspection tracking.',
         icon: 'tabler:fire-hydrant',
+      },
+      {
+        title: 'Stock Management',
+        description: 'Manage your stock inventory including quantities, locations, and reorder alerts.',
+        icon: 'tabler:abacus',
       },
     ]}
   >
@@ -327,6 +338,11 @@ const metadata = {
         title: 'Briefings',
         description: 'Generate and share industry standard briefings electronically.',
         icon: 'flat-color-icons:briefcase',
+      },
+      {
+        title: 'Water Points',
+        description: 'Locate static water sources, maintained by fire stations and property owners.',
+        icon: 'tabler:map-pins',
       },
       {
         title: 'Radio Simulator',
@@ -381,7 +397,7 @@ const metadata = {
   />
   -->
 
-  <!-- Stats Widget ****************** 
+  <!-- Stats Widget ******************
 
   <Stats
     items={[

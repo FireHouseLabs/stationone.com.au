@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
@@ -28,6 +28,10 @@ export default defineConfig({
   trailingSlash: SITE_CONFIG.trailingSlash ? 'always' : 'never',
 
   output: 'static',
+
+  image: {
+    service: passthroughImageService(),
+  },
 
   integrations: [
     tailwind({
