@@ -8,7 +8,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 //import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 //import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-//import FAQs from '~/components/widgets/FAQs.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 //import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
@@ -208,7 +208,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-
   <!-- Steps Widget ****************** -->
   <!--
   <Steps
@@ -265,8 +264,8 @@ const metadata = {
   <!-- Features2 Widget - Available Today ************** -->
 
   <Features2
-    title="Available Today"
-    subtitle="These features are live and ready to use in StationOne."
+    title="Powerful Features for Modern Fire Services"
+    subtitle="Everything you need to streamline operations, improve safety, and enhance collaboration across your fire service."
     tagline="Features"
     id="details"
     items={[
@@ -305,49 +304,10 @@ const metadata = {
         description: 'Manage your stock inventory including quantities, locations, and reorder alerts.',
         icon: 'tabler:abacus',
       },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Features2 Widget - Roadmap ************** -->
-
-  <Features2
-    title="On Our Roadmap"
-    subtitle="Exciting features we're working on to further enhance StationOne."
-    tagline="Coming Soon"
-    items={[
       {
         title: 'Pre-Plans',
         description: 'Develop, share and collaborate on pre-plans for significant risks.',
-        icon: 'flat-color-icons:reading-ebook',
-      },
-      {
-        title: 'Community Hub',
-        description: 'Engage with the community to ensure they are fire safe and prepared.',
-        icon: 'flat-color-icons:home',
-      },
-      {
-        title: 'Size Up',
-        description: 'Use LiDAR and AI Technology to perform an incident size up and share with your crews.',
-        icon: 'flat-color-icons:process',
-      },
-      {
-        title: 'Briefings',
-        description: 'Generate and share industry standard briefings electronically.',
-        icon: 'flat-color-icons:briefcase',
-      },
-      {
-        title: 'Water Points',
-        description: 'Locate static water sources, maintained by fire stations and property owners.',
-        icon: 'tabler:map-pins',
-      },
-      {
-        title: 'Radio Simulator',
-        description: 'Train new recruits in our advanced radio simulator.',
-        icon: 'flat-color-icons:assistant',
+        icon: 'tabler:clipboard-check',
       },
     ]}
   >
@@ -356,46 +316,45 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- FAQs Widget *******************
+  <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    subtitle="Find answers to common questions about StationOne and how it can help your fire service."
     tagline="FAQs"
     items={[
       {
-        title: 'What do I need to start?',
+        title: 'What do I need to get started with StationOne?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          "All you need is an internet connection and a device (computer, tablet, or smartphone). StationOne is a cloud-based platform, so there's no software to install. Simply sign up for an account and you can start managing your station immediately.",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Is StationOne suitable for volunteer fire brigades?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Absolutely! StationOne is designed for both career and volunteer fire services of all sizes. Our platform helps volunteer brigades reduce administrative burden, improve compliance tracking, and ensure critical information is always accessible when needed.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'How secure is our data on StationOne?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Security is our top priority. StationOne uses industry-standard encryption for data in transit and at rest. We host our infrastructure on secure, enterprise-grade servers with regular backups. Access controls ensure that only authorized members can view sensitive information.',
       },
       {
-        title: "What's an example of when you changed your mind?",
+        title: 'Can we access StationOne on mobile devices in the field?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Yes! StationOne is fully responsive and works seamlessly on smartphones and tablets. Firefighters can access pre-plans, complete inspections, and update information from any device, whether they're at the station or responding to an incident.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'What kind of support and training do you provide?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'We provide comprehensive onboarding support including video tutorials, documentation, and direct assistance from our team. We work with you to ensure your brigade is comfortable using all features and can help train your members as needed.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Can we import our existing data into StationOne?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Yes, we can help you migrate existing data from spreadsheets, other systems, or paper records into StationOne. Our team will work with you to ensure a smooth transition and minimal disruption to your operations.',
       },
     ]}
   />
-  -->
 
   <!-- Stats Widget ******************
 

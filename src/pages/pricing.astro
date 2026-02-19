@@ -10,9 +10,9 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Pricing
-    title="Brigade Pricing"
+    title="Individual Volunteer Brigade Pricing"
     tagline="Pricing"
-    subtitle="Simple pricing for individual brigades. One plan with everything included. Choose monthly or save with annual billing."
+    subtitle="Simple pricing for individual volunteer fire brigades. One plan with everything included. Choose monthly or save with annual billing."
     prices={[
       {
         title: 'Monthly',
@@ -83,14 +83,113 @@ const metadata = {
   </div>
 
   <div class="bg-blue-50 dark:bg-slate-800 py-16">
-    <div class="text-center max-w-3xl mx-auto px-4">
-      <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2">Enterprise</p>
-      <h2 class="text-4xl font-bold mb-4">Organisation Pricing</h2>
-      <p class="text-lg text-muted dark:text-slate-400 mb-8">
-        Looking to deploy StationOne across all brigades or units in your organisation? We offer enterprise contracts
-        with custom pricing tailored to your needs.
-      </p>
-      <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us for Pricing</a>
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2">Enterprise</p>
+        <h2 class="text-4xl font-bold mb-4">Organisation Pricing</h2>
+        <p class="text-lg text-muted dark:text-slate-400 mb-8">
+          Looking to deploy StationOne across all brigades or units in your organisation? We offer enterprise contracts
+          with custom pricing tailored to your needs.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-10 text-left">
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">Custom Subdomains</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">Branded access for your organisation</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">Private Database Hosting</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">Dedicated database infrastructure for your data</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">Private Object Storage</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">Secure, isolated storage for your files and media</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">OAuth SSO Integration</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">Single sign-on with your existing identity provider</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">Enhanced Security</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">
+              Enterprise-grade security best practices and compliance
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg
+            class="w-6 h-6 text-primary dark:text-blue-400 flex-shrink-0 mt-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="font-semibold mb-1">Dedicated Support</h3>
+            <p class="text-muted dark:text-slate-400 text-sm">Priority support and onboarding assistance</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us for Pricing</a>
+      </div>
     </div>
   </div>
 </Layout>
