@@ -12,7 +12,28 @@ export const headerData = {
     },
     {
       text: 'Features',
-      href: getPermalink('/#details'),
+      links: [
+        {
+          text: 'Actions & Tasks',
+          href: getPermalink('/features/actions'),
+        },
+        {
+          text: 'Calendar & Events',
+          href: getPermalink('/features/calendar'),
+        },
+        {
+          text: 'Inspections',
+          href: getPermalink('/features/inspections'),
+        },
+        {
+          text: 'Pre-Plans',
+          href: getPermalink('/features/preplans'),
+        },
+        {
+          text: 'All Features',
+          href: getPermalink('/#details'),
+        },
+      ],
     },
     {
       text: 'Pricing',

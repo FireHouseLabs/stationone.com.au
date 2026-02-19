@@ -1,0 +1,347 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Actions & Task Management - StationOne',
+  description:
+    'Manage maintenance tasks, track issues, and ensure nothing falls through the cracks with automated action generation and comprehensive workflow management.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Never Miss a <span class="text-secondary dark:text-white highlight">Maintenance Task</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        StationOne's Actions feature ensures maintenance tasks are tracked, assigned, and resolved systematically. From
+        automatic generation based on inspection failures to public issue reporting, keep your entire operation running
+        smoothly.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Complete Task Management System"
+    subtitle="Track maintenance, assign work, and ensure accountability across your entire fire service"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Automatic Generation',
+        description:
+          'Actions are created automatically when inspections identify failed items or missing/expired components—inspection findings immediately become tracked work.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Manual Creation',
+        description:
+          'Brigade members can create actions for general maintenance needs, requests, or issues that arise outside the inspection process.',
+        icon: 'tabler:plus',
+      },
+      {
+        title: 'Public Issue Reporting',
+        description:
+          'Community members can submit issues via your brigade page without logging in, ensuring public accountability and transparency.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Assignment & Due Dates',
+        description:
+          'Assign actions to specific team members, set due dates, and track completion targets with automatic overdue highlighting.',
+        icon: 'tabler:calendar-due',
+      },
+      {
+        title: 'Four-Stage Workflow',
+        description:
+          'Actions progress through Open → In Progress → Resolved → Closed, providing clear status visibility and accountability.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Out of Service Management',
+        description:
+          'Mark assets as out of service when resolving actions, preventing their use until repairs are verified and complete.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Seven Categories',
+        description:
+          'Classify actions as Vehicle, Equipment, Stock, Building &amp; Maintenance, PPE &amp; Uniform, IT, or Other for better organization.',
+        icon: 'tabler:category',
+      },
+      {
+        title: 'Multiple Views & Filters',
+        description:
+          'View My Actions, Unit Actions, By Category, or By Source with powerful filtering for workload management and reporting.',
+        icon: 'tabler:adjustments',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Workflow Integration -->
+  <Content
+    tagline="Seamless Integration"
+    title="Actions Connect Everything Together"
+    items={[
+      {
+        title: 'Inspection Integration',
+        description:
+          'Failed inspection items automatically generate actions with context and references back to the original inspection.',
+      },
+      {
+        title: 'Asset Management',
+        description:
+          'Link actions to vehicles, equipment, and assets to maintain complete service history and maintenance records.',
+      },
+      {
+        title: 'Stock Control',
+        description:
+          'Actions for missing or expired stock items ensure inventory is replenished and maintained appropriately.',
+      },
+      {
+        title: 'Building Maintenance',
+        description:
+          'Track facility issues, repairs, and improvements with dedicated building and maintenance action categories.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Hub of Your Operations</h3>
+       Actions are the central nervous system of StationOne. Every module—from inspections to stock management—feeds
+      into the actions system, ensuring nothing falls through the cracks.
+    </Fragment>
+  </Content>
+
+  <!-- Workflow Stages -->
+  <Content
+    isReversed
+    tagline="Clear Workflow"
+    title="Four-Stage Action Lifecycle"
+    items={[
+      {
+        title: 'Open',
+        description: 'Newly created actions awaiting assignment or work to begin. Clearly visible in team dashboards.',
+      },
+      {
+        title: 'In Progress',
+        description: 'Actions actively being addressed by assigned team members. Track who is working on what.',
+      },
+      {
+        title: 'Resolved',
+        description: 'Work completed and awaiting verification. Ensures quality control before final closure.',
+      },
+      {
+        title: 'Closed',
+        description: 'Verified and complete. Actions are archived with full history for compliance and reporting.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Progress Through Defined Stages
+      </h3>
+       Clear workflow stages provide visibility into what's happening, who's responsible, and what needs attention next.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Categories -->
+  <Content
+    tagline="Organized by Type"
+    title="Seven Action Categories"
+    items={[
+      {
+        title: 'Vehicle',
+        description: 'Maintenance, repairs, and issues related to fire apparatus and response vehicles.',
+      },
+      {
+        title: 'Equipment',
+        description: 'Tools, mounted equipment, safety gear, and firefighting equipment maintenance.',
+      },
+      {
+        title: 'Stock',
+        description: 'Inventory replenishment, expired items, and supply management.',
+      },
+      {
+        title: 'Building &amp; Maintenance',
+        description: 'Station facilities, infrastructure repairs, and property maintenance.',
+      },
+      {
+        title: 'PPE &amp; Uniform',
+        description: 'Personal protective equipment maintenance, replacement, and uniform requests.',
+      },
+      {
+        title: 'IT',
+        description: 'Technology issues, software problems, and digital infrastructure maintenance.',
+      },
+      {
+        title: 'Other',
+        description: "General tasks and issues that don't fit into specific categories.",
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Automatic &amp; Manual Categorization
+      </h3>
+       Actions are automatically categorized based on their source (e.g., vehicle inspection failures → Vehicle
+      category), with manual override available when needed.
+    </Fragment>
+  </Content>
+
+  <!-- Out of Service -->
+  <Content
+    isReversed
+    tagline="Safety First"
+    title="Out of Service Management"
+    items={[
+      {
+        title: 'Prevent Unsafe Usage',
+        description:
+          'Mark vehicles, equipment, or assets as out of service when resolving actions to prevent their selection in inspections or operations.',
+      },
+      {
+        title: 'Automatic Reinstatement',
+        description:
+          'Assets are automatically returned to service when actions are verified and closed—no manual updates required.',
+      },
+      {
+        title: 'Clear Status Visibility',
+        description:
+          "Out of service items are clearly marked across the platform, ensuring everyone knows what's unavailable.",
+      },
+      {
+        title: 'Compliance &amp; Safety',
+        description:
+          'Ensure that only operational, compliant equipment is used while repairs and maintenance are underway.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Keep Unsafe Equipment Out of Service
+      </h3>
+       When something fails an inspection or requires maintenance, you can immediately take it out of service—protecting
+      your crew and ensuring only ready equipment is deployed.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Public Reporting -->
+  <Content
+    tagline="Community Engagement"
+    title="Public Issue Reporting"
+    items={[
+      {
+        title: 'No Login Required',
+        description:
+          'Community members submit issues directly from your public brigade page without creating accounts.',
+      },
+      {
+        title: 'Limited Categories',
+        description:
+          'Public reporters can select from Building &amp; Maintenance, PPE &amp; Uniform, IT, or Other to keep submissions focused.',
+      },
+      {
+        title: 'Transparency &amp; Accountability',
+        description: 'Enable public oversight and community participation in maintaining your fire service facilities.',
+      },
+      {
+        title: 'Optional Feature',
+        description:
+          "Enable or disable public reporting based on your brigade's preferences and community engagement strategy.",
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Empower Your Community</h3>
+       Let community members report issues they notice at your station or facilities, creating transparency and
+      encouraging public participation in fire service support.
+    </Fragment>
+  </Content>
+
+  <!-- Visibility & Reporting -->
+  <Content
+    isReversed
+    tagline="Complete Visibility"
+    title="Multiple Views & Powerful Filtering"
+    items={[
+      {
+        title: 'My Actions',
+        description: 'Personal view of actions assigned to you, helping individuals manage their workload.',
+      },
+      {
+        title: 'Unit Actions',
+        description: 'See all actions across your brigade or unit for complete operational visibility.',
+      },
+      {
+        title: 'By Category',
+        description:
+          'Filter actions by Vehicle, Equipment, Stock, Building, PPE, IT, or Other to focus on specific areas.',
+      },
+      {
+        title: 'By Source',
+        description: 'View actions by origin—inspection-generated, manually created, or publicly reported.',
+      },
+      {
+        title: 'Overdue Highlighting',
+        description: 'Automatic highlighting of overdue actions ensures priority tasks get attention.',
+      },
+      {
+        title: 'Performance Reporting',
+        description: 'Analyze completion rates, response times, and workload distribution for continuous improvement.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Manage Workload Effectively</h3>
+       Multiple views and filtering options help teams prioritize work, balance workloads, and ensure critical
+      maintenance tasks are completed on time.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to streamline your maintenance?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services using StationOne to track every task, ensure accountability, and never let critical maintenance
+      fall through the cracks.
+    </Fragment>
+  </CallToAction>
+</Layout>
