@@ -1,7 +1,5 @@
 {
   "name": "stationone-website",
   "compatibility_date": "2026-02-20",
-  "assets": {
-    "directory": "./dist"
-  }
+  "pages_build_output_dir": "dist",
 }
