@@ -5,7 +5,6 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
@@ -45,45 +44,45 @@ const metadata = {
 
   <Features
     id="features"
-    tagline="Platform Overview"
-    title="Streamline your firefighting operations"
-    subtitle="StationOne offers a range of features and tools to assist firefighters in both daily operations and while managing large-scale complex incidents."
+    tagline="Benefits of Using StationOne"
+    title="Why fire services choose StationOne"
+    subtitle="StationOne helps fire services work smarter, not harder—giving you more time to focus on protecting your community."
     items={[
       {
-        title: 'Planning',
+        title: 'Save Time',
         description:
-          'Pre-Plans are an integral part of fire fighting operations but easily become out of date. Pre-Plans are typically paper documents, manually reviewed and subject to damage or loss.',
-        icon: 'tabler:brand-tailwind',
+          'Reduce hours spent on paperwork, manual tracking, and administrative tasks. Focus on what matters most—protecting your community.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'Collaboration',
+        title: 'Improve Safety',
         description:
-          'Allow businesses, residents and stakeholders to update critical information regarding their fire plans that is shared with fire services in real-time.',
-        icon: 'tabler:message-dots',
+          'Ensure crews have accurate, up-to-date information when it matters most. Better data means better decisions on the incident ground.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Operational & Briefings',
+        title: 'Stay Compliant',
         description:
-          'Paper based documentation is still widely used operationally. This creates an administrative burden and generates "information silos" risking crew safety.',
-        icon: 'tabler:list-check',
+          'Never miss an inspection, qualification expiry, or compliance deadline. Automated tracking and reminders keep your brigade audit-ready.',
+        icon: 'tabler:certificate',
       },
       {
-        title: 'Command & Control',
+        title: 'Real-Time Access',
         description:
-          'Size up your incident and ensure everyone is on the same page, a single source of truth is shared in real- time, up and down the chain of command.',
-        icon: 'tabler:chevrons-up',
+          'Access critical information from anywhere—station, vehicle, or incident scene. Works offline and syncs when connected.',
+        icon: 'tabler:cloud',
       },
       {
-        title: 'Improved Efficiency',
+        title: 'Reduce Admin Burden',
         description:
-          'Reduce time to complete required tasks, encouraging, introducing rigid process and automation of routine maintenance and compliance reporting.',
-        icon: 'tabler:alarm',
+          'Eliminate duplicate data entry and paper-based processes. Volunteers spend less time on admin and more time on training and operations.',
+        icon: 'tabler:file-minus',
       },
       {
-        title: 'Equipment Management',
+        title: 'Single Source of Truth',
         description:
-          'Equipment and Asset tracking is often done manually, this can be a time consuming process that is error prone. Leading to equipment getting lost or vital repairs getting overlooked.',
-        icon: 'tabler:firetruck',
+          'No more information silos or outdated spreadsheets. Everyone works from the same data, ensuring consistency across your organisation.',
+        icon: 'tabler:database',
       },
     ]}
   />
@@ -153,6 +152,11 @@ const metadata = {
         title: 'Pre-Plans',
         description: 'Develop, share and collaborate on pre-plans for significant risks.',
         icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Public Access',
+        description: 'Share brigade info and conduct inspections via QR codes—no login required on any device.',
+        icon: 'tabler:qrcode',
       },
     ]}
   >

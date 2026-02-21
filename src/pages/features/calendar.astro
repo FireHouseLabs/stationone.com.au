@@ -7,7 +7,8 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Calendar & Scheduling - StationOne',
-  description: 'Organize events, schedule training, book vehicles and rooms, and track attendance—all in one integrated calendar system.',
+  description:
+    'Organize events, schedule training, book vehicles and rooms, and track attendance—all in one integrated calendar system.',
 };
 ---
 
@@ -38,22 +39,26 @@ const metadata = {
     items={[
       {
         title: 'Event Management',
-        description: 'Organize brigade activities, track RSVP responses, and automatically coordinate vehicles and resources for scheduled events.',
+        description:
+          'Organize brigade activities, track RSVP responses, and automatically coordinate vehicles and resources for scheduled events.',
         icon: 'tabler:calendar-event',
       },
       {
         title: 'Training Scheduling',
-        description: 'Schedule training sessions across six categories (drill, skills, operational, fitness, safety, other) with attendance tracking and capacity management.',
+        description:
+          'Schedule training sessions across six categories (drill, skills, operational, fitness, safety, other) with attendance tracking and capacity management.',
         icon: 'tabler:school',
       },
       {
         title: 'Vehicle Bookings',
-        description: 'Reserve apparatus and vehicles with approval workflows, conflict detection, and real-time availability tracking.',
+        description:
+          'Reserve apparatus and vehicles with approval workflows, conflict detection, and real-time availability tracking.',
         icon: 'tabler:firetruck',
       },
       {
         title: 'Room Reservations',
-        description: 'Manage facility spaces with capacity limits, approval workflows, conflict prevention, and public booking access.',
+        description:
+          'Manage facility spaces with capacity limits, approval workflows, conflict prevention, and public booking access.',
         icon: 'tabler:door',
       },
       {
@@ -63,17 +68,20 @@ const metadata = {
       },
       {
         title: 'Automatic Notifications',
-        description: 'Send invitations, reminders to specific groups, and day-of notifications automatically to keep everyone informed.',
+        description:
+          'Send invitations, reminders to specific groups, and day-of notifications automatically to keep everyone informed.',
         icon: 'tabler:bell',
       },
       {
         title: 'Conflict Detection',
-        description: 'Prevent double-booking of vehicles and rooms with automatic overlap detection and visual conflict indicators.',
+        description:
+          'Prevent double-booking of vehicles and rooms with automatic overlap detection and visual conflict indicators.',
         icon: 'tabler:alert-triangle',
       },
       {
         title: 'Integrated Resources',
-        description: 'Assigning vehicles or rooms to events and training creates automatic bookings that stay synchronized.',
+        description:
+          'Assigning vehicles or rooms to events and training creates automatic bookings that stay synchronized.',
         icon: 'tabler:link',
       },
     ]}
@@ -90,15 +98,18 @@ const metadata = {
     items={[
       {
         title: 'RSVP Tracking',
-        description: 'Three attendance statuses (attending, maybe, not attending) plus "Not Responded" for targeted reminders.',
+        description:
+          'Three attendance statuses (attending, maybe, not attending) plus "Not Responded" for targeted reminders.',
       },
       {
         title: 'Smart Notifications',
-        description: 'Initial invitations, targeted reminders to specific groups, and automatic day-of reminders to confirmed attendees.',
+        description:
+          'Initial invitations, targeted reminders to specific groups, and automatic day-of reminders to confirmed attendees.',
       },
       {
         title: 'Vehicle Integration',
-        description: 'Assign vehicles to events and automatically create pre-approved bookings covering the event timeframe.',
+        description:
+          'Assign vehicles to events and automatically create pre-approved bookings covering the event timeframe.',
       },
       {
         title: 'Event Cancellation',
@@ -110,7 +121,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Track Attendance &amp; Coordinate Resources
       </h3>
-      Create events with scheduling, location, and description details. Members RSVP via email, and the system
+       Create events with scheduling, location, and description details. Members RSVP via email, and the system
       automatically manages vehicles and notifications.
     </Fragment>
   </Content>
@@ -119,11 +130,12 @@ const metadata = {
   <Content
     isReversed
     tagline="Training Management"
-    title="Schedule &amp; Track Training Sessions"
+    title="Schedule & Track Training Sessions"
     items={[
       {
         title: 'Six Training Types',
-        description: 'Categorize sessions as drill, skills, operational, fitness, safety, or other for better organization.',
+        description:
+          'Categorize sessions as drill, skills, operational, fitness, safety, or other for better organization.',
       },
       {
         title: 'Two-Phase Attendance',
@@ -131,7 +143,8 @@ const metadata = {
       },
       {
         title: 'Capacity Management',
-        description: 'Set optional participant limits to prevent overcrowding—members cannot register when training is full.',
+        description:
+          'Set optional participant limits to prevent overcrowding—members cannot register when training is full.',
       },
       {
         title: 'Instructor Assignment',
@@ -151,7 +164,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Organize Professional Development
       </h3>
-      Schedule training sessions with dates, times, locations, and descriptions. Track who registered, who attended,
+       Schedule training sessions with dates, times, locations, and descriptions. Track who registered, who attended,
       and maintain compliance with mandatory training requirements.
     </Fragment>
 
@@ -184,10 +197,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Manage Fleet Reservations
-      </h3>
-      Track which vehicles are reserved and when. The approval workflow ensures proper authorization while conflict
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Manage Fleet Reservations</h3>
+       Track which vehicles are reserved and when. The approval workflow ensures proper authorization while conflict
       detection prevents scheduling issues.
     </Fragment>
   </Content>
@@ -196,7 +207,7 @@ const metadata = {
   <Content
     isReversed
     tagline="Facility Management"
-    title="Room Booking &amp; Reservations"
+    title="Room Booking & Reservations"
     items={[
       {
         title: 'Four Booking States',
@@ -208,7 +219,8 @@ const metadata = {
       },
       {
         title: 'Active/Inactive Rooms',
-        description: 'Active rooms are visible and bookable. Inactive rooms are hidden but retain existing reservations.',
+        description:
+          'Active rooms are visible and bookable. Inactive rooms are hidden but retain existing reservations.',
       },
       {
         title: 'Public Booking Access',
@@ -216,19 +228,19 @@ const metadata = {
       },
       {
         title: 'Approval Requirements',
-        description: 'Require approval for member bookings while auto-approving administrator and event-related reservations.',
+        description:
+          'Require approval for member bookings while auto-approving administrator and event-related reservations.',
       },
       {
         title: 'Event &amp; Training Sync',
-        description: 'Assigning rooms creates automatic bookings that release when events or training sessions are cancelled.',
+        description:
+          'Assigning rooms creates automatic bookings that release when events or training sessions are cancelled.',
       },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Coordinate Facility Spaces
-      </h3>
-      Manage meeting rooms, training spaces, and other facilities with capacity tracking, approval workflows, and
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Coordinate Facility Spaces</h3>
+       Manage meeting rooms, training spaces, and other facilities with capacity tracking, approval workflows, and
       conflict detection.
     </Fragment>
 
@@ -240,7 +252,7 @@ const metadata = {
   <!-- RSVP & Notifications -->
   <Content
     tagline="Smart Communication"
-    title="One-Click RSVP &amp; Notifications"
+    title="One-Click RSVP & Notifications"
     items={[
       {
         title: 'Unique RSVP Tokens',
@@ -269,10 +281,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Keep Everyone Informed
-      </h3>
-      Frictionless RSVP system with unique email tokens and intelligent notification targeting ensures high engagement
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Keep Everyone Informed</h3>
+       Frictionless RSVP system with unique email tokens and intelligent notification targeting ensures high engagement
       and attendance.
     </Fragment>
   </Content>
@@ -302,11 +312,9 @@ const metadata = {
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Integrated Calendar System
-      </h3>
-      Events, training, vehicles, and rooms all work together seamlessly. Book resources once and let StationOne
-      handle the synchronization.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Integrated Calendar System</h3>
+       Events, training, vehicles, and rooms all work together seamlessly. Book resources once and let StationOne handle
+      the synchronization.
     </Fragment>
 
     <Fragment slot="bg">
@@ -317,7 +325,7 @@ const metadata = {
   <!-- Permissions & Controls -->
   <Content
     tagline="Role-Based Access"
-    title="Administrative Controls &amp; Permissions"
+    title="Administrative Controls & Permissions"
     items={[
       {
         title: 'Event Administration',
@@ -333,7 +341,8 @@ const metadata = {
       },
       {
         title: 'Manual Enrollment',
-        description: 'Administrators can manually add members to events/training and set their initial attendance status.',
+        description:
+          'Administrators can manually add members to events/training and set their initial attendance status.',
       },
     ]}
   >
@@ -341,7 +350,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Maintain Control &amp; Oversight
       </h3>
-      Role-based permissions ensure proper authorization for creating, managing, and approving calendar activities and
+       Role-based permissions ensure proper authorization for creating, managing, and approving calendar activities and
       resource bookings.
     </Fragment>
   </Content>
@@ -358,9 +367,7 @@ const metadata = {
       href: '/#contact',
     }}
   >
-    <Fragment slot="title">
-      Ready to streamline your scheduling?
-    </Fragment>
+    <Fragment slot="title">Ready to streamline your scheduling?</Fragment>
 
     <Fragment slot="subtitle">
       Join fire services using StationOne to coordinate events, training, and resources in one integrated calendar
