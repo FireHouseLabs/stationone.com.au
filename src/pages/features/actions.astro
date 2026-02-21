@@ -77,7 +77,7 @@ const metadata = {
       {
         title: 'Seven Categories',
         description:
-          'Classify actions as Vehicle, Equipment, Stock, Building &amp; Maintenance, PPE &amp; Uniform, IT, or Other for better organization.',
+          'Classify actions as Vehicle, Equipment, Stock, Building & Maintenance, PPE & Uniform, IT, or Other for better organization.',
         icon: 'tabler:category',
       },
       {
@@ -119,6 +119,7 @@ const metadata = {
           'Track facility issues, repairs, and improvements with dedicated building and maintenance action categories.',
       },
     ]}
+    image={{ src: import('~/assets/images/feature_actions_01.jpg'), alt: 'StationOne Actions Dashboard' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Hub of Your Operations</h3>
@@ -150,6 +151,7 @@ const metadata = {
         description: 'Verified and complete. Actions are archived with full history for compliance and reporting.',
       },
     ]}
+    image={{ src: import('~/assets/images/feature_actions_02.jpg'), alt: 'Action workflow stages' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -181,11 +183,11 @@ const metadata = {
         description: 'Inventory replenishment, expired items, and supply management.',
       },
       {
-        title: 'Building &amp; Maintenance',
+        title: 'Building & Maintenance',
         description: 'Station facilities, infrastructure repairs, and property maintenance.',
       },
       {
-        title: 'PPE &amp; Uniform',
+        title: 'PPE & Uniform',
         description: 'Personal protective equipment maintenance, replacement, and uniform requests.',
       },
       {
@@ -197,10 +199,11 @@ const metadata = {
         description: "General tasks and issues that don't fit into specific categories.",
       },
     ]}
+    image={{ src: import('~/assets/images/feature_actions_03.jpg'), alt: 'Action categories' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Automatic &amp; Manual Categorization
+        Automatic & Manual Categorisation
       </h3>
        Actions are automatically categorized based on their source (e.g., vehicle inspection failures → Vehicle
       category), with manual override available when needed.
@@ -229,11 +232,12 @@ const metadata = {
           "Out of service items are clearly marked across the platform, ensuring everyone knows what's unavailable.",
       },
       {
-        title: 'Compliance &amp; Safety',
+        title: 'Compliance & Safety',
         description:
           'Ensure that only operational, compliant equipment is used while repairs and maintenance are underway.',
       },
     ]}
+    image={{ src: import('~/assets/images/feature_actions_04.jpg'), alt: 'Out of service management' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -256,72 +260,24 @@ const metadata = {
       {
         title: 'No Login Required',
         description:
-          'Community members submit issues directly from your public brigade page without creating accounts.',
+          'Brigade embers submit issues directly from your public brigade page without creating accounts on their own devices.',
       },
       {
         title: 'Limited Categories',
         description:
-          'Public reporters can select from Building &amp; Maintenance, PPE &amp; Uniform, IT, or Other to keep submissions focused.',
-      },
-      {
-        title: 'Transparency &amp; Accountability',
-        description: 'Enable public oversight and community participation in maintaining your fire service facilities.',
+          'Public reporters can select from Building & Maintenance, PPE & Uniform, IT, or Other to keep submissions focused.',
       },
       {
         title: 'Optional Feature',
-        description:
-          "Enable or disable public reporting based on your brigade's preferences and community engagement strategy.",
+        description: "Enable or disable public reporting based on your brigade's preferences.",
       },
     ]}
+    image={{ src: import('~/assets/images/feature_actions_05.jpg'), alt: 'Public issue reporting' }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Empower Your Community</h3>
-       Let community members report issues they notice at your station or facilities, creating transparency and
-      encouraging public participation in fire service support.
-    </Fragment>
-  </Content>
-
-  <!-- Visibility & Reporting -->
-  <Content
-    isReversed
-    tagline="Complete Visibility"
-    title="Multiple Views & Powerful Filtering"
-    items={[
-      {
-        title: 'My Actions',
-        description: 'Personal view of actions assigned to you, helping individuals manage their workload.',
-      },
-      {
-        title: 'Unit Actions',
-        description: 'See all actions across your brigade or unit for complete operational visibility.',
-      },
-      {
-        title: 'By Category',
-        description:
-          'Filter actions by Vehicle, Equipment, Stock, Building, PPE, IT, or Other to focus on specific areas.',
-      },
-      {
-        title: 'By Source',
-        description: 'View actions by origin—inspection-generated, manually created, or publicly reported.',
-      },
-      {
-        title: 'Overdue Highlighting',
-        description: 'Automatic highlighting of overdue actions ensures priority tasks get attention.',
-      },
-      {
-        title: 'Performance Reporting',
-        description: 'Analyze completion rates, response times, and workload distribution for continuous improvement.',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Manage Workload Effectively</h3>
-       Multiple views and filtering options help teams prioritize work, balance workloads, and ensure critical
-      maintenance tasks are completed on time.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Empower Your Members</h3>
+       Let your members report issues they notice at your station or facilities, creating transparency and assisting in
+      rapid resolution of issues.
     </Fragment>
   </Content>
 
