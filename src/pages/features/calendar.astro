@@ -1,0 +1,377 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Calendar & Scheduling - StationOne',
+  description:
+    'Organize events, schedule training, book vehicles and rooms, and track attendance—all in one integrated calendar system.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Coordinate Everything in <span class="text-secondary dark:text-white highlight">One Calendar</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        StationOne's integrated calendar system brings together events, training sessions, vehicle bookings, and room
+        reservations. Track attendance, manage resources, and keep your entire brigade synchronized.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Complete Scheduling & Resource Management"
+    subtitle="Everything you need to coordinate activities, training, and resources across your fire service"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Event Management',
+        description:
+          'Organize brigade activities, track RSVP responses, and automatically coordinate vehicles and resources for scheduled events.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Training Scheduling',
+        description:
+          'Schedule training sessions across six categories (drill, skills, operational, fitness, safety, other) with attendance tracking and capacity management.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Vehicle Bookings',
+        description:
+          'Reserve apparatus and vehicles with approval workflows, conflict detection, and real-time availability tracking.',
+        icon: 'tabler:firetruck',
+      },
+      {
+        title: 'Room Reservations',
+        description:
+          'Manage facility spaces with capacity limits, approval workflows, conflict prevention, and public booking access.',
+        icon: 'tabler:door',
+      },
+      {
+        title: 'One-Click RSVP',
+        description: 'Members can confirm attendance directly from email with unique RSVP tokens—no login required.',
+        icon: 'tabler:click',
+      },
+      {
+        title: 'Automatic Notifications',
+        description:
+          'Send invitations, reminders to specific groups, and day-of notifications automatically to keep everyone informed.',
+        icon: 'tabler:bell',
+      },
+      {
+        title: 'Conflict Detection',
+        description:
+          'Prevent double-booking of vehicles and rooms with automatic overlap detection and visual conflict indicators.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Integrated Resources',
+        description:
+          'Assigning vehicles or rooms to events and training creates automatic bookings that stay synchronized.',
+        icon: 'tabler:link',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Events -->
+  <Content
+    tagline="Event Management"
+    title="Organize Brigade Activities"
+    items={[
+      {
+        title: 'RSVP Tracking',
+        description:
+          'Three attendance statuses (attending, maybe, not attending) plus "Not Responded" for targeted reminders.',
+      },
+      {
+        title: 'Smart Notifications',
+        description:
+          'Initial invitations, targeted reminders to specific groups, and automatic day-of reminders to confirmed attendees.',
+      },
+      {
+        title: 'Vehicle Integration',
+        description:
+          'Assign vehicles to events and automatically create pre-approved bookings covering the event timeframe.',
+      },
+      {
+        title: 'Event Cancellation',
+        description: 'Cancel events and automatically notify all members while releasing vehicle and room bookings.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Track Attendance &amp; Coordinate Resources
+      </h3>
+       Create events with scheduling, location, and description details. Members RSVP via email, and the system
+      automatically manages vehicles and notifications.
+    </Fragment>
+  </Content>
+
+  <!-- Training -->
+  <Content
+    isReversed
+    tagline="Training Management"
+    title="Schedule & Track Training Sessions"
+    items={[
+      {
+        title: 'Six Training Types',
+        description:
+          'Categorize sessions as drill, skills, operational, fitness, safety, or other for better organization.',
+      },
+      {
+        title: 'Two-Phase Attendance',
+        description: 'Track member registration before training and confirm actual attendance after sessions conclude.',
+      },
+      {
+        title: 'Capacity Management',
+        description:
+          'Set optional participant limits to prevent overcrowding—members cannot register when training is full.',
+      },
+      {
+        title: 'Instructor Assignment',
+        description: 'Assign instructors to sessions for clear leadership and role-based permissions.',
+      },
+      {
+        title: 'Mandatory Training Flags',
+        description: 'Identify required sessions for regulatory compliance and qualification maintenance.',
+      },
+      {
+        title: 'Room Integration',
+        description: 'Assign rooms to training sessions and automatically create synchronized bookings.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Organize Professional Development
+      </h3>
+       Schedule training sessions with dates, times, locations, and descriptions. Track who registered, who attended,
+      and maintain compliance with mandatory training requirements.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Vehicle Bookings -->
+  <Content
+    tagline="Fleet Management"
+    title="Vehicle Booking System"
+    items={[
+      {
+        title: 'Approval Workflow',
+        description: 'Bookings progress through pending → approved → cancelled status with administrator oversight.',
+      },
+      {
+        title: 'Conflict Prevention',
+        description: 'Automatic overlap detection prevents double-booking of vehicles for the same time period.',
+      },
+      {
+        title: 'Real-Time Availability',
+        description: 'Display current booking status and availability for all vehicles in your fleet.',
+      },
+      {
+        title: 'Event Auto-Booking',
+        description: 'When vehicles are assigned to events, pre-approved bookings are created automatically.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Manage Fleet Reservations</h3>
+       Track which vehicles are reserved and when. The approval workflow ensures proper authorization while conflict
+      detection prevents scheduling issues.
+    </Fragment>
+  </Content>
+
+  <!-- Room Bookings -->
+  <Content
+    isReversed
+    tagline="Facility Management"
+    title="Room Booking & Reservations"
+    items={[
+      {
+        title: 'Four Booking States',
+        description: 'Pending, Approved, Rejected, and Cancelled statuses provide clear workflow management.',
+      },
+      {
+        title: 'Capacity Limits',
+        description: 'Set room capacity to ensure spaces are not over-booked beyond their physical limitations.',
+      },
+      {
+        title: 'Active/Inactive Rooms',
+        description:
+          'Active rooms are visible and bookable. Inactive rooms are hidden but retain existing reservations.',
+      },
+      {
+        title: 'Public Booking Access',
+        description: 'Enable public visitors to submit booking requests via secure tokens without requiring login.',
+      },
+      {
+        title: 'Approval Requirements',
+        description:
+          'Require approval for member bookings while auto-approving administrator and event-related reservations.',
+      },
+      {
+        title: 'Event &amp; Training Sync',
+        description:
+          'Assigning rooms creates automatic bookings that release when events or training sessions are cancelled.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Coordinate Facility Spaces</h3>
+       Manage meeting rooms, training spaces, and other facilities with capacity tracking, approval workflows, and
+      conflict detection.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- RSVP & Notifications -->
+  <Content
+    tagline="Smart Communication"
+    title="One-Click RSVP & Notifications"
+    items={[
+      {
+        title: 'Unique RSVP Tokens',
+        description: 'Members click links in emails to confirm attendance or register for training—no login required.',
+      },
+      {
+        title: 'Initial Invitations',
+        description: 'Send invitations immediately when creating events/training, or defer sending for later.',
+      },
+      {
+        title: 'Targeted Reminders',
+        description: 'Send reminders to specific groups: attending only, maybe, not responded, or all members.',
+      },
+      {
+        title: 'Automatic Day-Of Reminders',
+        description: 'Background jobs automatically send reminders to confirmed attendees on the day of the event.',
+      },
+      {
+        title: 'Contextual Prefixes',
+        description: 'Email subjects automatically prefixed with "Reminder:", "Today:", or other context for clarity.',
+      },
+      {
+        title: 'Cancellation Notifications',
+        description: 'Automatically notify all registered/RSVP members when events or training sessions are cancelled.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Keep Everyone Informed</h3>
+       Frictionless RSVP system with unique email tokens and intelligent notification targeting ensures high engagement
+      and attendance.
+    </Fragment>
+  </Content>
+
+  <!-- Integration -->
+  <Content
+    isReversed
+    tagline="Unified System"
+    title="Everything Works Together"
+    items={[
+      {
+        title: 'Automatic Resource Booking',
+        description: 'Assigning vehicles or rooms to events/training creates pre-approved bookings automatically.',
+      },
+      {
+        title: 'Synchronized Updates',
+        description: 'Changing event times updates associated bookings. Cancelling events releases all reservations.',
+      },
+      {
+        title: 'Visual Calendar',
+        description: 'See all events, training, vehicle bookings, and room reservations in one unified calendar view.',
+      },
+      {
+        title: 'Conflict Detection',
+        description: 'Visual indicators and automatic prevention of double-booking across vehicles and rooms.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Integrated Calendar System</h3>
+       Events, training, vehicles, and rooms all work together seamlessly. Book resources once and let StationOne handle
+      the synchronization.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Permissions & Controls -->
+  <Content
+    tagline="Role-Based Access"
+    title="Administrative Controls & Permissions"
+    items={[
+      {
+        title: 'Event Administration',
+        description: 'Brigade administrators and event creators can edit, manage attendance, and cancel events.',
+      },
+      {
+        title: 'Training Permissions',
+        description: 'Administrators and assigned instructors control training creation and attendance management.',
+      },
+      {
+        title: 'Booking Approvals',
+        description: 'Administrators review and approve vehicle and room booking requests from members.',
+      },
+      {
+        title: 'Manual Enrollment',
+        description:
+          'Administrators can manually add members to events/training and set their initial attendance status.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Maintain Control &amp; Oversight
+      </h3>
+       Role-based permissions ensure proper authorization for creating, managing, and approving calendar activities and
+      resource bookings.
+    </Fragment>
+  </Content>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to streamline your scheduling?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services using StationOne to coordinate events, training, and resources in one integrated calendar
+      system—reducing conflicts and improving attendance.
+    </Fragment>
+  </CallToAction>
+</Layout>

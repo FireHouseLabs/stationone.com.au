@@ -1,33 +1,33 @@
 ---
 import { Picture } from 'astro:assets';
-import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
-import Timeline from "~/components/ui/Timeline.astro";
-import Headline from "~/components/ui/Headline.astro";
-import type { Steps } from "~/types";
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Timeline from '~/components/ui/Timeline.astro';
+import Headline from '~/components/ui/Headline.astro';
+import type { Steps } from '~/types';
 
 const {
-  title = await Astro.slots.render("title"),
-  subtitle = await Astro.slots.render("subtitle"),
-  tagline = await Astro.slots.render("tagline"),
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
   items = [],
-  image = await Astro.slots.render("image"),
+  image = await Astro.slots.render('image'),
   isReversed = false,
 
   id,
   isDark = false,
   classes = {},
-  bg = await Astro.slots.render("bg"),
+  bg = await Astro.slots.render('bg'),
 } = Astro.props as Steps;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl ${classes?.container ?? ""}`} bg={bg}>
-  <div class:list={["flex flex-col gap-8 md:gap-12 md:flex-row", { "md:flex-row-reverse": isReversed }]}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class:list={['flex flex-col gap-8 md:gap-12 md:flex-row', { 'md:flex-row-reverse': isReversed }]}>
     <div class="md:py-4 md:basis-1/2 md:self-center">
       <Headline
         title={title}
         subtitle={subtitle}
         tagline={tagline}
-        classes={{ container: "text-left", title: "text-3xl lg:text-4xl", ...((classes?.headline as {}) ?? {}) }}
+        classes={{ container: 'text-left', title: 'text-3xl lg:text-4xl', ...((classes?.headline as {}) ?? {}) }}
       />
       <Timeline items={items} classes={classes?.items as {}} />
     </div>
@@ -45,7 +45,7 @@ const {
               width={432}
               height={768}
               src={image?.src}
-              alt={image?.alt || ""}
+              alt={image?.alt || ''}
             />
           ))
       }

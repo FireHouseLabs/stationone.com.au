@@ -1,0 +1,219 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Inspections & Templates - StationOne',
+  description:
+    'Streamline your vehicle, equipment, and asset inspections with customizable templates, automated scoring, and comprehensive compliance tracking.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Streamline Your <span class="text-secondary dark:text-white highlight">Inspections</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        StationOne's inspection system powers your preventive maintenance capabilities with customizable templates,
+        automated scoring, and comprehensive audit trails. Keep your vehicles, equipment, and assets ready when you need
+        them most.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Powerful Inspection Features"
+    subtitle="Everything you need to maintain compliance and ensure equipment readiness"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Automated Scoring & Pass/Fail',
+        description:
+          'Inspections automatically calculate results using an 80% threshold. Failed items trigger automatic maintenance action generation.',
+        icon: 'tabler:checks',
+      },
+      {
+        title: 'Flexible Inspection Types',
+        description:
+          'Support for vehicles, equipment, tools, safety gear, mounted equipment, and hydrants with customizable checklists.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'QR Code Public Access',
+        description:
+          'Enable public inspections via QR codes for external stakeholders and non-members to conduct checks without authentication.',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: 'Photo & Signature Capture',
+        description: 'Attach photos and digital signatures directly to inspection items for complete documentation.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Draft Auto-Saving',
+        description: 'Never lose your work with automatic draft saving during inspections. Resume where you left off.',
+        icon: 'tabler:device-floppy',
+      },
+      {
+        title: 'Supervisor Review',
+        description: 'Optional supervisor review workflow ensures quality control and accountability.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Complete Audit Trail',
+        description: 'Access full inspection history with detailed audit trails for compliance reporting and analysis.',
+        icon: 'tabler:history',
+      },
+      {
+        title: 'Scheduled Inspections',
+        description: 'Set up recurring inspection schedules to ensure routine maintenance never gets missed.',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Inspection Templates -->
+  <Content
+    isReversed
+    tagline="Customizable Templates"
+    title="Build Your Perfect Inspection Workflow"
+    items={[
+      {
+        title: 'Structured Sections & Subsections',
+        description:
+          'Organize inspections hierarchically with sections (e.g., "Engine Checks") and nested subsections for detailed areas.',
+      },
+      {
+        title: 'Version Control',
+        description:
+          'When templates with existing inspections are edited, new versions are created automatically—preserving historical accuracy.',
+      },
+      {
+        title: 'Smart Filtering',
+        description:
+          'Restrict templates to specific vehicle types or equipment categories, ensuring only relevant checklists appear.',
+      },
+      {
+        title: 'Expected Duration Estimates',
+        description: 'Set expected completion times to help schedule recurring inspections and manage crew workflows.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Templates That Work Your Way</h3>
+       Create standardized inspection processes across different vehicle and equipment types with flexible, reusable
+      templates. Define the structure once, use it everywhere.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Item Types -->
+  <Content
+    tagline="Flexible Input Types"
+    title="11 Different Item Types for Every Scenario"
+    items={[
+      {
+        title: 'Binary Responses',
+        description: 'Pass/Fail, Yes/No, Present/Missing checks for quick assessments.',
+      },
+      {
+        title: 'Quantity & Expiry Tracking',
+        description:
+          'Track quantities with expiry dates and automatic threshold alerts that generate corrective actions.',
+      },
+      {
+        title: 'Photo Documentation',
+        description: 'Capture visual evidence directly in your inspections for better documentation.',
+      },
+      {
+        title: 'Digital Signatures',
+        description: 'Collect inspector signatures for accountability and compliance.',
+      },
+      {
+        title: 'Numeric & Text Inputs',
+        description:
+          'Record measurements, readings, and detailed notes with sliders, number fields, text areas, and date pickers.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Capture Data Your Way</h3>
+       Choose from 11 different item types to build inspection templates that match your exact workflow—from simple
+      binary checks to complex quantity tracking with automatic expiry management.
+    </Fragment>
+  </Content>
+
+  <!-- Inspector Flexibility -->
+  <Content
+    isReversed
+    tagline="Who Can Inspect?"
+    title="Internal & External Inspections"
+    items={[
+      {
+        title: 'Internal Inspections',
+        description: 'Authenticated brigade members conduct routine checks with full system access and integration.',
+      },
+      {
+        title: 'Public Inspections',
+        description:
+          'External stakeholders, contractors, and service providers can complete inspections via QR codes without requiring user accounts.',
+      },
+      {
+        title: 'Action Management Integration',
+        description:
+          'Failed inspection items automatically generate corrective actions assigned to the right team members.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Flexible Access for Every Situation
+      </h3>
+       Whether it's daily pre-shift checks by crew members or annual service inspections by external contractors,
+      StationOne adapts to your workflow.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to streamline your inspections?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services already using StationOne to maintain compliance, improve equipment readiness, and reduce
+      administrative burden.
+    </Fragment>
+  </CallToAction>
+</Layout>
