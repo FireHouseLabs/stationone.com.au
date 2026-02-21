@@ -19,7 +19,11 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Start free trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:firetruck' }}
+    callToAction={{
+      text: 'Start free trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:firetruck',
+    }}
     callToAction2={{ text: 'See how it works ↓', href: '#features' }}
     image={{ src: import('~/assets/images/hero-image.png'), alt: 'StationOne Hero Image' }}
   >
@@ -32,6 +36,12 @@ const metadata = {
     <Fragment slot="subtitle">
       Paper inspections get filed and forgotten. Spreadsheets don't get updated. StationOne turns your weekly checks
       into tracked, actioned, compliant records — on any device, for every member of your brigade.
+    </Fragment>
+
+    <Fragment slot="content">
+      <p class="text-sm text-muted mt-6 dark:text-slate-400">
+        Trusted by brigades across Victoria. No credit card required.
+      </p>
     </Fragment>
   </Hero>
 
