@@ -19,20 +19,19 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Sign Up', href: 'https://app.stationone.com.au/register', icon: 'tabler:firetruck' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
+    callToAction={{ text: 'Start free trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:firetruck' }}
+    callToAction2={{ text: 'See how it works ↓', href: '#features' }}
     image={{ src: import('~/assets/images/hero-image.png'), alt: 'StationOne Hero Image' }}
   >
     <Fragment slot="title">
-      Streamline your
-      <span class="text-secondary dark:text-white highlight"> firefighting</span> operations with StationOne
+      The only inspection platform built for
+      <span class="text-secondary dark:text-white highlight">fire brigades</span>. Pay per brigade, not per user.
+      $16/month flat.
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">StationOne</span> empowers firefighters by providing them with a digital platform
-        that enhances their efficiency, safety, organisation, and access to information.</span
-      >
+      Paper inspections get filed and forgotten. Spreadsheets don't get updated. StationOne turns your weekly checks
+      into tracked, actioned, compliant records — on any device, for every member of your brigade.
     </Fragment>
   </Hero>
 
@@ -46,12 +45,12 @@ const metadata = {
     id="features"
     tagline="Benefits of Using StationOne"
     title="Why fire services choose StationOne"
-    subtitle="StationOne helps fire services work smarter, not harder—giving you more time to focus on protecting your community."
+    subtitle="StationOne helps fire services work smarter, not harder. Giving you more time to focus on protecting your community."
     items={[
       {
         title: 'Save Time',
         description:
-          'Reduce hours spent on paperwork, manual tracking, and administrative tasks. Focus on what matters most—protecting your community.',
+          'Reduce hours spent on paperwork, manual tracking, and administrative tasks. Focus on what matters most; protecting your community.',
         icon: 'tabler:clock',
       },
       {
@@ -69,7 +68,7 @@ const metadata = {
       {
         title: 'Real-Time Access',
         description:
-          'Access critical information from anywhere—station, vehicle, or incident scene. Works offline and syncs when connected.',
+          'Access critical information from anywhere: station, vehicle, or incident scene. Works offline and syncs when connected.',
         icon: 'tabler:cloud',
       },
       {
@@ -155,7 +154,7 @@ const metadata = {
       },
       {
         title: 'Public Access',
-        description: 'Share brigade info and conduct inspections via QR codes—no login required on any device.',
+        description: 'Share brigade info and conduct inspections via QR codes, no login required on any device.',
         icon: 'tabler:qrcode',
       },
     ]}
