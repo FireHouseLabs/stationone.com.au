@@ -1,0 +1,202 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'StationOne vs SafetyCulture - Compare Firefighting Software',
+  description:
+    'Compare StationOne with SafetyCulture for firefighting operations. See why StationOne is the better choice for volunteer and career fire brigades.',
+};
+
+const features = [
+  { feature: 'Purpose-built for Fire Brigades', stationOne: true, safetyCulture: false },
+  { feature: 'Fire Truck & Equipment Structures', stationOne: true, safetyCulture: false },
+  { feature: 'Pre-Incident Planning', stationOne: true, safetyCulture: false },
+  { feature: 'Hose Maintenance Tracking', stationOne: true, safetyCulture: false },
+  { feature: 'Hydrant Inspections & Management', stationOne: true, safetyCulture: false },
+  { feature: 'Actions System (Core Feature)', stationOne: true, safetyCulture: 'Limited' },
+  { feature: 'Rostering & Shift Management', stationOne: true, safetyCulture: false },
+  { feature: 'Incident Reporting', stationOne: true, safetyCulture: true },
+  { feature: 'Customisable Forms', stationOne: true, safetyCulture: true },
+  { feature: 'Mobile App', stationOne: true, safetyCulture: true },
+  { feature: 'Offline Mode', stationOne: true, safetyCulture: true },
+  { feature: 'Unlimited Users', stationOne: true, safetyCulture: 'Paid tier' },
+  { feature: 'Australian Made & Supported', stationOne: true, safetyCulture: false },
+];
+
+const pricing = [
+  {
+    title: 'StationOne',
+    price: '$16',
+    period: '/month per brigade',
+    description: 'Simple pricing for volunteer brigades',
+    features: [
+      'Unlimited users',
+      'All features included',
+      'Use your own device',
+      'Australian support',
+      'Purpose-built for firefighting',
+    ],
+    cta: 'Start Free Trial',
+    ctaLink: 'https://app.stationone.com.au/register',
+  },
+  {
+    title: 'SafetyCulture Free',
+    price: 'Free',
+    period: '',
+    description: 'Limited features for individuals',
+    features: [
+      'Up to 5 active inspection templates',
+      'Up to 3 years data history',
+      'Basic issue reporting',
+      'Basic task management',
+      'Limited to 3 devices',
+    ],
+    cta: 'Visit SafetyCulture',
+    ctaLink: 'https://safetyculture.com',
+  },
+  {
+    title: 'SafetyCulture Premium',
+    price: 'From $24',
+    period: '/user/month',
+    description: 'Full features, per-user pricing',
+    features: [
+      'Unlimited active inspections',
+      'Advanced analytics',
+      'Unlimited data',
+      'Workflow integrations',
+      'Improved actions & tasks',
+    ],
+    cta: 'Visit SafetyCulture',
+    ctaLink: 'https://safetyculture.com',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="relative pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">StationOne vs SafetyCulture</h1>
+        <p class="text-xl text-muted max-w-3xl mx-auto">
+          See why StationOne is purpose-built for firefighting operations and a better fit for volunteer and career fire
+          brigades in Australia.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        {
+          pricing.map((item) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-slate-700">
+              <h3 class="text-2xl font-bold mb-2">{item.title}</h3>
+              <div class="mb-4">
+                <span class="text-4xl font-bold text-primary">{item.price}</span>
+                <span class="text-muted">{item.period}</span>
+              </div>
+              <p class="text-muted mb-6">{item.description}</p>
+              <ul class="space-y-3 mb-8">
+                {item.features.map((f) => (
+                  <li class="flex items-center gap-2">
+                    <svg
+                      class="w-5 h-5 text-green-500 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a href={item.ctaLink} class="btn btn-primary w-full text-center block">
+                {item.cta}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-6">Why SafetyCulture Isn't Designed for Fire Brigades</h2>
+        <p class="text-lg text-muted max-w-3xl mx-auto mb-12 text-center">
+          SafetyCulture (formerly iAuditor) was developed for the construction and auditing industry. While it offers
+          general inspection and task management tools, it lacks the specialised features that fire brigades need.
+          StationOne is purpose-built for firefighting operations, with our actions system at the core for managing
+          inspections, hose maintenance, hydrants, and more.
+        </p>
+        <h2 class="text-3xl font-bold text-center mb-12">Feature Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-slate-700">
+                <th class="py-4 px-4 font-semibold">Feature</th>
+                <th class="py-4 px-4 font-semibold text-center">StationOne</th>
+                <th class="py-4 px-4 font-semibold text-center">SafetyCulture</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                features.map((row, index) => (
+                  <tr class={index % 2 === 0 ? 'bg-gray-50 dark:bg-slate-800/50' : ''}>
+                    <td class="py-4 px-4 font-medium">{row.feature}</td>
+                    <td class="py-4 px-4 text-center">
+                      {row.stationOne === true ? (
+                        <svg
+                          class="w-6 h-6 mx-auto text-green-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        <span class="text-muted">{row.stationOne}</span>
+                      )}
+                    </td>
+                    <td class="py-4 px-4 text-center">
+                      {row.safetyCulture === true ? (
+                        <svg
+                          class="w-6 h-6 mx-auto text-green-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : row.safetyCulture === false ? (
+                        <svg class="w-6 h-6 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      ) : (
+                        <span class="text-muted">{row.safetyCulture}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 dark:bg-slate-800 rounded-2xl p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Not sure which solution is right for you?</h2>
+        <p class="text-lg text-muted mb-6 max-w-2xl mx-auto">
+          We'd be happy to discuss your needs and show you how StationOne can help your brigade operate more
+          efficiently.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us</a>
+          <a href="https://app.stationone.com.au/register" class="btn btn-secondary text-lg px-8 py-3"
+            >Start Free Trial</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
