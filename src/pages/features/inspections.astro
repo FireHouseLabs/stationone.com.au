@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Inspections & Templates - StationOne',
   description:
-    'Streamline your vehicle, equipment, and asset inspections with customizable templates, automated scoring, and comprehensive compliance tracking.',
+    'Streamline your vehicle, equipment, and asset inspections with customisable templates, automated scoring, and comprehensive compliance tracking.',
 };
 ---
 
@@ -24,7 +24,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        StationOne's inspection system powers your preventive maintenance capabilities with customizable templates,
+        StationOne's inspection system powers your preventive maintenance capabilities with customisable templates,
         automated scoring, and comprehensive audit trails. Keep your vehicles, equipment, and assets ready when you need
         them most.
       </span>
@@ -47,7 +47,7 @@ const metadata = {
       {
         title: 'Flexible Inspection Types',
         description:
-          'Support for vehicles, equipment, tools, safety gear, mounted equipment, and hydrants with customizable checklists.',
+          'Support for vehicles, equipment, tools, safety gear, mounted equipment, and hydrants with customisable checklists.',
         icon: 'tabler:adjustments',
       },
       {
@@ -91,13 +91,13 @@ const metadata = {
   <!-- Inspection Templates -->
   <Content
     isReversed
-    tagline="Customizable Templates"
+    tagline="Customisable Templates"
     title="Build Your Perfect Inspection Workflow"
     items={[
       {
         title: 'Structured Sections & Subsections',
         description:
-          'Organize inspections hierarchically with sections (e.g., "Engine Checks") and nested subsections for detailed areas.',
+          'Organise inspections hierarchically with sections (e.g., "Engine Checks") and nested subsections for detailed areas.',
       },
       {
         title: 'Version Control',
@@ -117,7 +117,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Templates That Work Your Way</h3>
-       Create standardized inspection processes across different vehicle and equipment types with flexible, reusable
+       Create standardised inspection processes across different vehicle and equipment types with flexible, reusable
       templates. Define the structure once, use it everywhere.
     </Fragment>
 
@@ -154,6 +154,7 @@ const metadata = {
           'Record measurements, readings, and detailed notes with sliders, number fields, text areas, and date pickers.',
       },
     ]}
+    image={{ src: import('~/assets/images/inspections_02.png'), alt: 'Inspection item types' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Capture Data Your Way</h3>
@@ -183,6 +184,7 @@ const metadata = {
           'Failed inspection items automatically generate corrective actions assigned to the right team members.',
       },
     ]}
+    image={{ src: import('~/assets/images/inspections_03.png'), alt: 'Internal and external inspections' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
