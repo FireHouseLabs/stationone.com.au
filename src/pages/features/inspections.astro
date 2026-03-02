@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -87,117 +86,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
-
-  <!-- Inspection Templates -->
-  <Content
-    isReversed
-    tagline="Customisable Templates"
-    title="Build Your Perfect Inspection Workflow"
-    items={[
-      {
-        title: 'Structured Sections & Subsections',
-        description:
-          'Organise inspections hierarchically with sections (e.g., "Engine Checks") and nested subsections for detailed areas.',
-      },
-      {
-        title: 'Version Control',
-        description:
-          'When templates with existing inspections are edited, new versions are created automatically—preserving historical accuracy.',
-      },
-      {
-        title: 'Smart Filtering',
-        description:
-          'Restrict templates to specific vehicle types or equipment categories, ensuring only relevant checklists appear.',
-      },
-      {
-        title: 'Expected Duration Estimates',
-        description: 'Set expected completion times to help schedule recurring inspections and manage crew workflows.',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Templates That Work Your Way</h3>
-       Create standardised inspection processes across different vehicle and equipment types with flexible, reusable
-      templates. Define the structure once, use it everywhere.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Item Types -->
-  <Content
-    tagline="Flexible Input Types"
-    title="11 Different Item Types for Every Scenario"
-    items={[
-      {
-        title: 'Binary Responses',
-        description: 'Pass/Fail, Yes/No, Present/Missing checks for quick assessments.',
-      },
-      {
-        title: 'Quantity & Expiry Tracking',
-        description:
-          'Track quantities with expiry dates and automatic threshold alerts that generate corrective actions.',
-      },
-      {
-        title: 'Photo Documentation',
-        description: 'Capture visual evidence directly in your inspections for better documentation.',
-      },
-      {
-        title: 'Digital Signatures',
-        description: 'Collect inspector signatures for accountability and compliance.',
-      },
-      {
-        title: 'Numeric & Text Inputs',
-        description:
-          'Record measurements, readings, and detailed notes with sliders, number fields, text areas, and date pickers.',
-      },
-    ]}
-    image={{ src: import('~/assets/images/inspections_02.png'), alt: 'Inspection item types' }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Capture Data Your Way</h3>
-       Choose from 11 different item types to build inspection templates that match your exact workflow—from simple
-      binary checks to complex quantity tracking with automatic expiry management.
-    </Fragment>
-  </Content>
-
-  <!-- Inspector Flexibility -->
-  <Content
-    isReversed
-    tagline="Who Can Inspect?"
-    title="Internal & External Inspections"
-    items={[
-      {
-        title: 'Internal Inspections',
-        description: 'Authenticated brigade members conduct routine checks with full system access and integration.',
-      },
-      {
-        title: 'Public Inspections',
-        description:
-          'External stakeholders, contractors, and service providers can complete inspections via QR codes without requiring user accounts.',
-      },
-      {
-        title: 'Action Management Integration',
-        description:
-          'Failed inspection items automatically generate corrective actions assigned to the right team members.',
-      },
-    ]}
-    image={{ src: import('~/assets/images/inspections_03.png'), alt: 'Internal and external inspections' }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Flexible Access for Every Situation
-      </h3>
-       Whether it's daily pre-shift checks by crew members or annual service inspections by external contractors,
-      StationOne adapts to your workflow.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Call to Action -->
   <CallToAction

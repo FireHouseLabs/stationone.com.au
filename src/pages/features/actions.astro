@@ -93,41 +93,6 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- Workflow Integration -->
-  <Content
-    tagline="Seamless Integration"
-    title="Actions Connect Everything Together"
-    items={[
-      {
-        title: 'Inspection Integration',
-        description:
-          'Failed inspection items automatically generate actions with context and references back to the original inspection.',
-      },
-      {
-        title: 'Asset Management',
-        description:
-          'Link actions to vehicles, equipment, and assets to maintain complete service history and maintenance records.',
-      },
-      {
-        title: 'Stock Control',
-        description:
-          'Actions for missing or expired stock items ensure inventory is replenished and maintained appropriately.',
-      },
-      {
-        title: 'Building Maintenance',
-        description:
-          'Track facility issues, repairs, and improvements with dedicated building and maintenance action categories.',
-      },
-    ]}
-    image={{ src: import('~/assets/images/feature_actions_01.jpg'), alt: 'StationOne Actions Dashboard' }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Hub of Your Operations</h3>
-       Actions are the central nervous system of StationOne. Every module—from inspections to stock management—feeds
-      into the actions system, ensuring nothing falls through the cracks.
-    </Fragment>
-  </Content>
-
   <!-- Workflow Stages -->
   <Content
     isReversed
@@ -162,51 +127,6 @@ const metadata = {
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Categories -->
-  <Content
-    tagline="Organized by Type"
-    title="Seven Action Categories"
-    items={[
-      {
-        title: 'Vehicle',
-        description: 'Maintenance, repairs, and issues related to fire apparatus and response vehicles.',
-      },
-      {
-        title: 'Equipment',
-        description: 'Tools, mounted equipment, safety gear, and firefighting equipment maintenance.',
-      },
-      {
-        title: 'Stock',
-        description: 'Inventory replenishment, expired items, and supply management.',
-      },
-      {
-        title: 'Building & Maintenance',
-        description: 'Station facilities, infrastructure repairs, and property maintenance.',
-      },
-      {
-        title: 'PPE & Uniform',
-        description: 'Personal protective equipment maintenance, replacement, and uniform requests.',
-      },
-      {
-        title: 'IT',
-        description: 'Technology issues, software problems, and digital infrastructure maintenance.',
-      },
-      {
-        title: 'Other',
-        description: "General tasks and issues that don't fit into specific categories.",
-      },
-    ]}
-    image={{ src: import('~/assets/images/feature_actions_03.jpg'), alt: 'Action categories' }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Automatic & Manual Categorisation
-      </h3>
-       Actions are automatically categorized based on their source (e.g., vehicle inspection failures → Vehicle
-      category), with manual override available when needed.
     </Fragment>
   </Content>
 
