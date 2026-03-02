@@ -1,0 +1,112 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Calendar & Scheduling - StationOne',
+  description:
+    'Organise events, schedule training, book vehicles and rooms, and track attendance—all in one integrated calendar system.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Coordinate Everything in <span class="text-secondary dark:text-white highlight">One Calendar</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        StationOne's integrated calendar system brings together events, training sessions, vehicle bookings, and room
+        reservations. Track attendance, manage resources, and keep your entire brigade synchronised.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Complete Scheduling & Resource Management"
+    subtitle="Everything you need to coordinate activities, training, and resources across your fire service"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Event Management',
+        description:
+          'Organise brigade activities, track RSVP responses, and automatically coordinate vehicles and resources for scheduled events.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Training Scheduling',
+        description:
+          'Schedule training sessions across six categories (drill, skills, operational, fitness, safety, other) with attendance tracking and capacity management.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Vehicle Bookings',
+        description:
+          'Reserve apparatus and vehicles with approval workflows, conflict detection, and real-time availability tracking.',
+        icon: 'tabler:firetruck',
+      },
+      {
+        title: 'Room Reservations',
+        description:
+          'Manage facility spaces with capacity limits, approval workflows, conflict prevention, and public booking access.',
+        icon: 'tabler:door',
+      },
+      {
+        title: 'One-Click RSVP',
+        description: 'Members can confirm attendance directly from email with unique RSVP tokens—no login required.',
+        icon: 'tabler:click',
+      },
+      {
+        title: 'Automatic Notifications',
+        description:
+          'Send invitations, reminders to specific groups, and day-of notifications automatically to keep everyone informed.',
+        icon: 'tabler:bell',
+      },
+      {
+        title: 'Conflict Detection',
+        description:
+          'Prevent double-booking of vehicles and rooms with automatic overlap detection and visual conflict indicators.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Integrated Resources',
+        description:
+          'Assigning vehicles or rooms to events and training creates automatic bookings that stay synchronised.',
+        icon: 'tabler:link',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to streamline your scheduling?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services using StationOne to coordinate events, training, and resources in one integrated calendar
+      system—reducing conflicts and improving attendance.
+    </Fragment>
+  </CallToAction>
+</Layout>

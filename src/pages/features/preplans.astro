@@ -1,0 +1,112 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pre-Plans - StationOne',
+  description:
+    'Develop comprehensive emergency response documents for buildings and sites with interactive mapping, hazmat tracking, and real-time collaboration.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Critical Information When You <span class="text-secondary dark:text-white highlight">Need It</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Build comprehensive pre-plans with businesses, property owners, and stakeholders. Arm first responders with
+        live, real-time situational intelligence before, during, and after any incident.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Comprehensive Pre-Planning Features"
+    subtitle="Everything you need to develop and maintain effective emergency response plans"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Site Documentation',
+        description:
+          'Record facility details including company name, address, GPS coordinates, occupancy numbers, operational hours, and emergency contacts.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Building Details',
+        description:
+          'Document building names, dimensions (length, width, height), construction materials, assembly areas, and plant room locations.',
+        icon: 'tabler:dimensions',
+      },
+      {
+        title: 'Hazardous Materials Tracking',
+        description:
+          'Log dangerous goods with UN numbers, proper shipping names, hazard classifications, quantities, and storage locations linked to national databases.',
+        icon: 'tabler:biohazard',
+      },
+      {
+        title: 'Service Isolation Points',
+        description:
+          'Map critical shutoff points for electricity, gas, water, and solar systems to enable rapid emergency response.',
+        icon: 'tabler:power',
+      },
+      {
+        title: 'Interactive Mapping',
+        description:
+          'Drag-and-drop marker positioning and polygon zones for hazmat areas, exclusion zones, and building outlines on satellite imagery.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Media Management',
+        description:
+          'Attach site photos, floor plans, and fire service documents with descriptions and source tracking.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Automated Review Cycles',
+        description: '12-month review cycles with automated reminders to ensure pre-plans stay current and accurate.',
+        icon: 'tabler:calendar-repeat',
+      },
+      {
+        title: 'Secure Sharing',
+        description:
+          'Share pre-plans across units within organizations and publish to public brigade pages with restricted access to sensitive data.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to improve your pre-planning?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services using StationOne to build comprehensive pre-plans, collaborate with stakeholders, and arm crews
+      with critical information before they arrive on scene.
+    </Fragment>
+  </CallToAction>
+</Layout>

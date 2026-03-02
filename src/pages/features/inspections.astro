@@ -1,0 +1,109 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Inspections & Templates - StationOne',
+  description:
+    'Streamline your vehicle, equipment, and asset inspections with customisable templates, automated scoring, and comprehensive compliance tracking.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
+    callToAction2={{ text: 'Learn More', href: '#features' }}
+  >
+    <Fragment slot="title">
+      Streamline Your <span class="text-secondary dark:text-white highlight">Inspections</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        StationOne's inspection system powers your preventive maintenance capabilities with customisable templates,
+        automated scoring, and comprehensive audit trails. Keep your vehicles, equipment, and assets ready when you need
+        them most.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Core Capabilities -->
+  <Features2
+    id="features"
+    title="Powerful Inspection Features"
+    subtitle="Everything you need to maintain compliance and ensure equipment readiness"
+    tagline="Core Capabilities"
+    items={[
+      {
+        title: 'Automated Scoring & Pass/Fail',
+        description:
+          'Inspections automatically calculate results using an 80% threshold. Failed items trigger automatic maintenance action generation.',
+        icon: 'tabler:checks',
+      },
+      {
+        title: 'Flexible Inspection Types',
+        description:
+          'Support for vehicles, equipment, tools, safety gear, mounted equipment, and hydrants with customisable checklists.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'QR Code Public Access',
+        description:
+          'Enable public inspections via QR codes for external stakeholders and non-members to conduct checks without authentication.',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: 'Photo & Signature Capture',
+        description: 'Attach photos and digital signatures directly to inspection items for complete documentation.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Draft Auto-Saving',
+        description: 'Never lose your work with automatic draft saving during inspections. Resume where you left off.',
+        icon: 'tabler:device-floppy',
+      },
+      {
+        title: 'Supervisor Review',
+        description: 'Optional supervisor review workflow ensures quality control and accountability.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Complete Audit Trail',
+        description: 'Access full inspection history with detailed audit trails for compliance reporting and analysis.',
+        icon: 'tabler:history',
+      },
+      {
+        title: 'Scheduled Inspections',
+        description: 'Set up recurring inspection schedules to ensure routine maintenance never gets missed.',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Call to Action -->
+  <CallToAction
+    callToAction={{
+      text: 'Start Your Free Trial',
+      href: 'https://app.stationone.com.au/register',
+      icon: 'tabler:rocket',
+    }}
+    callToAction2={{
+      text: 'Contact Sales',
+      href: '/#contact',
+    }}
+  >
+    <Fragment slot="title">Ready to streamline your inspections?</Fragment>
+
+    <Fragment slot="subtitle">
+      Join fire services already using StationOne to maintain compliance, improve equipment readiness, and reduce
+      administrative burden.
+    </Fragment>
+  </CallToAction>
+</Layout>

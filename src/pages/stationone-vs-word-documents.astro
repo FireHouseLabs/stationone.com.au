@@ -1,0 +1,176 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'StationOne vs Word Documents - Modernise Your Inspections',
+  description:
+    'Stop using Word documents for firefighting inspections. See how StationOne digitises your checklists and ensures critical safety issues are actioned.',
+};
+
+const features = [
+  { feature: 'Digital checklists on any device', stationOne: true, wordDocs: false },
+  { feature: 'Instant action assignment & tracking', stationOne: true, wordDocs: false },
+  { feature: 'Automated reminders for due inspections', stationOne: true, wordDocs: false },
+  { feature: 'Real-time visibility of issues', stationOne: true, wordDocs: false },
+  { feature: 'Complete audit trail & history', stationOne: true, wordDocs: 'Limited' },
+  { feature: 'Photo & evidence attachments', stationOne: true, wordDocs: 'Manual' },
+  { feature: 'Searchable inspection records', stationOne: true, wordDocs: false },
+  { feature: 'Role-based access control', stationOne: true, wordDocs: false },
+  { feature: 'Offline capability', stationOne: true, wordDocs: false },
+  { feature: 'Automatic reporting & analytics', stationOne: true, wordDocs: false },
+  { feature: 'Centralised data storage', stationOne: true, wordDocs: false },
+  { feature: 'Firefighting-specific templates', stationOne: true, wordDocs: false },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="relative pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">StationOne vs Word Documents</h1>
+        <p class="text-xl text-muted max-w-3xl mx-auto">
+          Stop filing paper checklists that never get looked at. Digitise your inspections and ensure critical safety
+          issues are always actioned.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-6">Why Word Documents Fail Fire Brigades</h2>
+        <p class="text-lg text-muted max-w-3xl mx-auto mb-12 text-center">
+          Many brigades still use Word documents for their inspection checklists. Whether printed and completed manually
+          or filled out digitally and saved, these approaches leave critical gaps that put safety at risk.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-red-50 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <div
+              class="w-12 h-12 mx-auto mb-4 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center"
+            >
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Safety Issues Ignored</h3>
+            <p class="text-muted text-sm">
+              Paper copies are filed away and rarely reviewed. Critical safety issues go unnoticed until it's too late.
+            </p>
+          </div>
+
+          <div class="bg-red-50 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <div
+              class="w-12 h-12 mx-auto mb-4 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center"
+            >
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">No Accountability</h3>
+            <p class="text-muted text-sm">
+              With Word docs, there's no way to track who completed the inspection or when issues were identified.
+            </p>
+          </div>
+
+          <div class="bg-red-50 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <div
+              class="w-12 h-12 mx-auto mb-4 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center"
+            >
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Lost or Misplaced</h3>
+            <p class="text-muted text-sm">
+              Digital files saved on individual computers get lost. Paper copies are misplaced or destroyed.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-center mb-12">Feature Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-slate-700">
+                <th class="py-4 px-4 font-semibold">Feature</th>
+                <th class="py-4 px-4 font-semibold text-center">StationOne</th>
+                <th class="py-4 px-4 font-semibold text-center">Word Documents</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                features.map((row, index) => (
+                  <tr class={index % 2 === 0 ? 'bg-gray-50 dark:bg-slate-800/50' : ''}>
+                    <td class="py-4 px-4 font-medium">{row.feature}</td>
+                    <td class="py-4 px-4 text-center">
+                      {row.stationOne === true ? (
+                        <svg
+                          class="w-6 h-6 mx-auto text-green-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        <span class="text-muted">{row.stationOne}</span>
+                      )}
+                    </td>
+                    <td class="py-4 px-4 text-center">
+                      {row.wordDocs === true ? (
+                        <svg
+                          class="w-6 h-6 mx-auto text-green-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : row.wordDocs === false ? (
+                        <svg class="w-6 h-6 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      ) : (
+                        <span class="text-muted">{row.wordDocs}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 dark:bg-slate-800 rounded-2xl p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to modernise your inspections?</h2>
+        <p class="text-lg text-muted mb-6 max-w-2xl mx-auto">
+          Join brigades who have switched from Word documents to StationOne and never miss a safety issue again.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us</a>
+          <a href="https://app.stationone.com.au/register" class="btn btn-secondary text-lg px-8 py-3"
+            >Start Free Trial</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

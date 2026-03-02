@@ -8,6 +8,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  bold?: boolean;
 }
 
 interface Links {
@@ -52,10 +53,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
+                {links.map(({ text, href, ariaLabel, bold }) => (
                   <li class="mb-2">
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      class:list={[
+                        'text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out',
+                        { 'font-bold text-default dark:text-slate-200': bold },
+                      ]}
                       href={href}
                       aria-label={ariaLabel}
                     >

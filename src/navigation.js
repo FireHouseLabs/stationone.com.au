@@ -12,7 +12,28 @@ export const headerData = {
     },
     {
       text: 'Features',
-      href: getPermalink('/#details'),
+      links: [
+        {
+          text: 'Actions & Tasks',
+          href: getPermalink('/features/actions'),
+        },
+        {
+          text: 'Calendar & Events',
+          href: getPermalink('/features/calendar'),
+        },
+        {
+          text: 'Inspections',
+          href: getPermalink('/features/inspections'),
+        },
+        {
+          text: 'Pre-Plans',
+          href: getPermalink('/features/preplans'),
+        },
+        {
+          text: 'All Features',
+          href: getPermalink('/#details'),
+        },
+      ],
     },
     {
       text: 'Pricing',
@@ -31,50 +52,30 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    // {
-    //   title: 'Product',
-    //   links: [
-    //     { text: 'Features', href: '#features' },
-    //     { text: 'About', href: '#about' },
-    //     //{ text: 'Team', href: '#' },
-    //     //{ text: 'Enterprise', href: '#' },
-    //     //{ text: 'Customer stories', href: '#' },
-    //     //{ text: 'Pricing', href: '#' },
-    //     //{ text: 'Resources', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Platform',
-    //   links: [
-    //     { text: 'Developer API', href: '#' },
-    //     { text: 'Partners', href: '#' },
-    //     { text: 'Atom', href: '#' },
-    //     { text: 'Electron', href: '#' },
-    //     { text: 'AstroWind Desktop', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Support',
-    //   links: [
-    //     { text: 'Docs', href: '#' },
-    //     { text: 'Community Forum', href: '#' },
-    //     { text: 'Professional Services', href: '#' },
-    //     { text: 'Skills', href: '#' },
-    //     { text: 'Status', href: '#' },
-    //   ],
-    // },
-    // {
-    //   title: 'Company',
-    //   links: [
-    //     { text: 'About', href: '#' },
-    //     { text: 'Blog', href: '#' },
-    //     { text: 'Careers', href: '#' },
-    //     { text: 'Press', href: '#' },
-    //     { text: 'Inclusion', href: '#' },
-    //     { text: 'Social Impact', href: '#' },
-    //     { text: 'Shop', href: '#' },
-    //   ],
-    // },
+    {
+      title: 'Company',
+      links: [
+        { text: 'About', href: getPermalink('/about'), bold: true },
+        { text: 'Pricing', href: getPermalink('/pricing'), bold: true },
+        { text: 'Contact', href: getPermalink('/contact'), bold: true },
+      ],
+    },
+    {
+      title: 'Features',
+      links: [
+        { text: 'Actions & Tasks', href: getPermalink('/features/actions') },
+        { text: 'Calendar & Events', href: getPermalink('/features/calendar') },
+        { text: 'Inspections', href: getPermalink('/features/inspections') },
+        { text: 'Pre-Plans', href: getPermalink('/features/preplans') },
+      ],
+    },
+    {
+      title: 'Compare',
+      links: [
+        { text: 'StationOne vs Word Docs', href: getPermalink('/stationone-vs-word-documents') },
+        { text: 'StationOne vs SafetyCulture', href: getPermalink('/stationone-vs-safetyculture') },
+      ],
+    },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
@@ -82,6 +83,6 @@ export const footerData = {
   ],
   socialLinks: [],
   footNote: `
-    Copyright StationOne ${new Date().getFullYear()} · All rights reserved.
+    Copyright StationOne ${new Date().getFullYear()} · All rights reserved. A FireHouse Labs Pty. Ltd platform.
   `,
 };
