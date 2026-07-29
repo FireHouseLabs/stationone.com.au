@@ -64,7 +64,7 @@ analytics:
   vendors:
     googleAnalytics:
       isEnabled: true
-      id: 'G-S9MV0Z88WL'
+      id: 'G-4NKLYB6B87'
 
 ui:
   theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
