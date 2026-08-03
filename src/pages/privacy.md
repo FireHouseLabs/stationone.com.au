@@ -14,7 +14,7 @@ We use Personal Data to provide and improve the Service. By using the Service, Y
 For the purposes of this Privacy Policy:
 
 - **Account** means a unique account created for a User to access the Service.
-- **Company** ("the Company", "We", "Us", "Our") refers to StationOne, Tyabb, Victoria 3913, Australia.
+- **Company** ("the Company", "We", "Us", "Our") refers to FireHouse Labs Pty Ltd, Victoria, Australia.
 - **Cookies** are small files placed on Your Device by a website to store information such as browsing history and login state.
 - **Country** refers to Victoria, Australia.
 - **Device** means any device that can access the Service, such as a computer, phone, or tablet.
