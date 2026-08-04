@@ -2,12 +2,12 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
+// import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
   title: 'StationOne - Streamline your firefighting operations.',
@@ -28,34 +28,30 @@ const metadata = {
     image={{ src: import('~/assets/images/hero-image.png'), alt: 'StationOne Hero Image' }}
   >
     <Fragment slot="title">
-      The only inspection platform built for
-      <span class="text-secondary dark:text-white highlight">emergency services</span>. Pay per brigade, not per user.
+      The only management platform built for
+      <span class="text-secondary dark:text-white highlight">emergency services</span>. Pay per unit, not per user.
       $16/month flat.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Paper inspections get filed and forgotten. Spreadsheets don't get updated. StationOne turns your weekly checks
-      into tracked, actioned, compliant records — on any device, for every member of your brigade.
+      Inspections, asset registers, equipment maintenance, training, and member development. StationOne turns every part
+      of your admin into tracked, actioned, compliant records, on any device, for every member of your unit.
     </Fragment>
 
     <Fragment slot="content">
       <p class="text-sm text-muted mt-6 dark:text-slate-400">
-        Trusted by brigades across Victoria. No credit card required.
+        Trusted by emergency services across Australia. No credit card required.
       </p>
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
     tagline="Benefits of Using StationOne"
-    title="Why fire services choose StationOne"
-    subtitle="StationOne helps fire services work smarter, not harder. Giving you more time to focus on protecting your community."
+    title="Why emergency services choose StationOne"
+    subtitle="StationOne helps emergency services work smarter, not harder. Giving you more time to focus on protecting your community."
     items={[
       {
         title: 'Save Time',
@@ -117,8 +113,8 @@ const metadata = {
   <!-- Features2 Widget - Available Today ************** -->
 
   <Features2
-    title="Powerful Features for Modern Fire Services"
-    subtitle="Everything you need to streamline operations, improve safety, and enhance collaboration across your fire service."
+    title="Powerful Features for Modern Fire and Emergency Services"
+    subtitle="Everything you need to streamline operations, improve safety, and enhance collaboration across your emergency service."
     tagline="Features"
     id="details"
     items={[
@@ -164,7 +160,7 @@ const metadata = {
       },
       {
         title: 'Public Access',
-        description: 'Share brigade info and conduct inspections via QR codes, no login required on any device.',
+        description: 'Share unit info and conduct inspections via QR codes, no login required on any device.',
         icon: 'tabler:qrcode',
       },
     ]}
@@ -178,7 +174,7 @@ const metadata = {
     id="feedback"
     callToAction={{
       text: 'View Roadmap',
-      href: 'https://stationone.canny.io/',
+      href: 'https://stationone.userjot.com',
       icon: 'tabler:map',
     }}
   >
@@ -232,17 +228,17 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ******************
+  <!-- Stats Widget ******************* -->
 
-  <Stats
+  <!-- <Stats
     items={[
       { name: 'Downloads', value: '132K' },
       { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
+      { name: 'Units', value: '590' },
+      { name: 'Users', value: '5,400+' },
     ]}
-  />
--->
+  /> -->
+
 
   <Contact
     id="contact"

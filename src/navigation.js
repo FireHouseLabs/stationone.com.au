@@ -45,8 +45,8 @@ export const headerData = {
     },
   ],
   actions: [
-    { text: 'Sign Up', href: 'https://app.stationone.com.au/register' },
-    { text: 'Log In', href: 'https://app.stationone.com.au/users/sign_in', class: 'btn-primary' },
+    { text: 'Log In', href: 'https://app.stationone.com.au/users/sign_in' },
+    { text: 'Sign Up', href: 'https://app.stationone.com.au/register', class: 'btn-primary' },
   ],
 };
 
@@ -55,9 +55,9 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: getPermalink('/about'), bold: true },
+        { text: 'About', href: getPermalink('/#features'), bold: true },
         { text: 'Pricing', href: getPermalink('/pricing'), bold: true },
-        { text: 'Contact', href: getPermalink('/contact'), bold: true },
+        { text: 'Contact', href: getPermalink('/#contact'), bold: true },
       ],
     },
     {
@@ -81,7 +81,9 @@ export const footerData = {
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
-  socialLinks: [],
+  socialLinks: [
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/stationoneapp' },
+  ],
   footNote: `
     Copyright StationOne ${new Date().getFullYear()} · All rights reserved. A FireHouse Labs Pty. Ltd platform.
   `,

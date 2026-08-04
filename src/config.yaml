@@ -18,14 +18,10 @@ metadata:
   openGraph:
     siteName: StationOne
     images:
-      - url: '~/assets/images/default.jpg'
+      - url: '~/assets/images/hero-image.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
 
 i18n:
   language: en
