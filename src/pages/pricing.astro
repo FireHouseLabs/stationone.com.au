@@ -1,95 +1,20 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Pricing from '~/components/widgets/Pricing.astro';
-
 const metadata = {
   title: 'Pricing',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Pricing
-    title="Individual Volunteer Brigade Pricing"
-    tagline="Pricing"
-    subtitle="Simple pricing for individual volunteer fire brigades. One plan with everything included. Choose monthly or save with annual billing."
-    prices={[
-      {
-        title: 'Monthly',
-        price: 16,
-        period: 'per month',
-        items: [
-          {
-            description: 'All features included',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Unlimited users',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Unlimited inspections',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Email support',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Cancel anytime',
-            icon: 'tabler:check',
-          },
-        ],
-      },
-      {
-        title: 'Annual',
-        price: 176,
-        period: 'per year',
-        items: [
-          {
-            description: 'All features included',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Unlimited users',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Unlimited inspections',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Email support',
-            icon: 'tabler:check',
-          },
-          {
-            description: 'Cancel anytime',
-            icon: 'tabler:check',
-          },
-        ],
-        hasRibbon: true,
-        ribbonTitle: 'Save $16',
-      },
-    ]}
-  />
-
-  <div class="text-center mt-12 mb-16 max-w-2xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
-    <p class="text-lg text-muted mb-8">
-      We offer a free 30-day trial with all new subscriptions. We can even help onboard your brigade for free to get you
-      up and running quickly.
-    </p>
-    <a href="https://app.stationone.com.au/register" class="btn btn-primary text-lg px-8 py-3"> Get Started</a>
-  </div>
-
-  <div class="bg-blue-50 dark:bg-slate-800 py-16">
+  <div class="py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-12">
         <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2">Enterprise</p>
-        <h2 class="text-4xl font-bold mb-4">Organisation Pricing</h2>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Organisation Pricing</h1>
         <p class="text-lg text-muted dark:text-slate-400 mb-8">
-          Looking to deploy StationOne across all brigades or units in your organisation? We offer enterprise contracts
-          with custom pricing tailored to your needs.
+          Deploying StationOne across your sites, crews or units? We offer enterprise contracts for mining, private
+          industry and government, with custom pricing tailored to your needs.
         </p>
       </div>
 
@@ -190,6 +115,17 @@ const metadata = {
       <div class="text-center">
         <a href="/#contact" class="btn btn-primary text-lg px-8 py-3">Contact Us for Pricing</a>
       </div>
+    </div>
+  </div>
+
+  <div class="bg-blue-50 dark:bg-slate-800 py-12">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-3">Independent Volunteer Brigades</h2>
+      <p class="text-lg text-muted dark:text-slate-400 mb-6">
+        Running a single volunteer brigade or unit? StationOne is available to independent brigades too! Get in touch and we'll
+        help you get set up.
+      </p>
+      <a href="/#contact" class="btn btn-secondary px-6 py-2">Get in Touch</a>
     </div>
   </div>
 </Layout>
