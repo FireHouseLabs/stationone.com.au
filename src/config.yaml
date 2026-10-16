@@ -61,6 +61,9 @@ analytics:
     googleAnalytics:
       isEnabled: true
       id: 'G-4NKLYB6B87'
+    metaPixel:
+      isEnabled: true
+      id: '1001714709613024'
 
 ui:
   theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

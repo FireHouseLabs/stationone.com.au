@@ -10,6 +10,7 @@ import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
+import MetaPixel from '~/components/common/MetaPixel.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 
 import { MetaData as MetaDataType } from '~/types';
@@ -32,6 +33,7 @@ const { language, textDirection } = I18N_CONFIG;
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
+    <MetaPixel />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
 

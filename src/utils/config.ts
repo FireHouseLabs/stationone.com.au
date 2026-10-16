@@ -64,6 +64,10 @@ export interface AnalyticsConfig {
       isEnabled?: boolean;
       id?: string;
     };
+    metaPixel: {
+      isEnabled?: boolean;
+      id?: string;
+    };
   };
 }
 
@@ -187,6 +191,10 @@ const getAnalytics = () => {
   const _default = {
     vendors: {
       googleAnalytics: {
+        isEnabled: false,
+        id: undefined,
+      },
+      metaPixel: {
         isEnabled: false,
         id: undefined,
       },
