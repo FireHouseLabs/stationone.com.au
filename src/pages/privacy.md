@@ -3,7 +3,7 @@ title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: July, 2026
+_Last updated_: October, 2026
 
 This Privacy Policy describes how StationOne collects, uses, discloses, and protects information in connection with the Service, and explains Your privacy rights.
 
@@ -66,6 +66,12 @@ Subscription payments are processed by Our third-party payment processor, Stripe
 
 We automatically collect Usage Data when You use the Service, including IP address, browser type and version, device identifiers, pages/features visited, and time spent, via Our analytics tooling.
 
+### Advertising and Marketing Data (Website Only)
+
+On the Website (https://stationone.com.au) only, We use advertising and measurement pixels, including the Meta Pixel provided by Meta Platforms, Inc. and its affiliates. These pixels may collect information about Your visit, such as Your IP address, browser and device information, the pages You view, and actions You take on the Website, and may set or read Cookies on Your Device. We use this information to measure the effectiveness of Our advertising, build audiences, and show relevant StationOne advertising on Meta platforms (such as Facebook and Instagram). Meta may use this data in accordance with its own privacy policy.
+
+Advertising pixels are **not** used within the StationOne application or any native app, and We do not send Account data, Member/Personnel Data, or Operational and Inspection Data to advertising providers.
+
 ### Error and Diagnostic Data
 
 We use third-party error tracking and monitoring services to detect and diagnose issues with the Service. These tools may incidentally capture technical context (such as request metadata) at the time an error occurs.
@@ -77,8 +83,9 @@ We use Cookies and similar technologies for:
 - **Necessary/Essential Cookies** (Session) — required to authenticate Users and maintain login sessions; without these, the Service cannot function.
 - **Functionality Cookies** (Persistent) — remember preferences such as login state, so You are not required to re-authenticate unnecessarily.
 - **Analytics Cookies** — help Us understand how the Service is used so We can improve it.
+- **Advertising Cookies and Pixels** (Website only) — used by Meta and similar providers to measure advertising performance and show relevant ads. These are not used within the StationOne application.
 
-You can configure Your browser to refuse Cookies, but some parts of the Service may not function correctly without them.
+You can configure Your browser to refuse Cookies, but some parts of the Service may not function correctly without them. You can also opt out of personalised advertising through Your Meta ad settings, or through industry tools such as the Digital Advertising Alliance of Australia's consumer opt-out or Your browser's "Do Not Track" and tracking-protection features.
 
 ## 5. How We Use Personal Data
 
@@ -89,7 +96,8 @@ We use Personal Data to:
 - process Subscription payments and manage billing;
 - send operational notifications (e.g. inspection reminders, overdue actions, trial expiry notices), subject to Your notification preferences where configurable;
 - maintain the security and integrity of the Service, including detecting fraud or unauthorized access;
-- analyse usage trends to improve the Service; and
+- analyse usage trends to improve the Service;
+- on the Website only, measure and improve Our advertising and marketing; and
 - comply with Our legal obligations.
 
 We do not sell Personal Data.
@@ -99,6 +107,7 @@ We do not sell Personal Data.
 We may share Personal Data:
 
 - **With Service Providers** who help Us operate the Service, including cloud hosting and storage (Amazon Web Services), payment processing (Stripe), email delivery, error tracking, and analytics providers — under contractual obligations to protect that data;
+- **With advertising providers** such as Meta, to the extent Website visit data is collected through advertising pixels as described in Section 3. This does not include data from within the StationOne application;
 - **With third-party data sources** where an Organisation enables integration with external geospatial datasets (e.g. state hydrant data providers), to the extent necessary for that integration;
 - **Within Your Organisation or Unit hierarchy**, since role-based access is a core feature of the Service — administrators may see data for Units and members within their scope of authority;
 - **Via Public Access Features**, where the Organisation or Unit has enabled a public link — information submitted or displayed through that link is accessible to anyone with the link;
