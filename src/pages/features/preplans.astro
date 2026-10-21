@@ -1,112 +1,124 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-const metadata = {
-  title: 'Pre-Plans - StationOne',
-  description:
-    'Develop comprehensive emergency response documents for buildings and sites with interactive mapping, hazmat tracking, and real-time collaboration.',
-};
+import preplanImage from '~/assets/images/pre-plan.png';
+import FeaturePage from '~/components/widgets/FeaturePage.astro';
 ---
 
-<Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <Hero
-    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
-    callToAction2={{ text: 'Learn More', href: '#features' }}
-  >
-    <Fragment slot="title">
-      Critical Information When You <span class="text-secondary dark:text-white highlight">Need It</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Build comprehensive pre-plans with businesses, property owners, and stakeholders. Arm first responders with
-        live, real-time situational intelligence before, during, and after any incident.
-      </span>
-    </Fragment>
-  </Hero>
-
-  <!-- Core Capabilities -->
-  <Features2
-    id="features"
-    title="Comprehensive Pre-Planning Features"
-    subtitle="Everything you need to develop and maintain effective emergency response plans"
-    tagline="Core Capabilities"
-    items={[
+<FeaturePage
+  name="Pre-plans"
+  title="Emergency Response Pre-Plans & Site Information"
+  description="Bring site contacts, hazards, isolation points, maps and floor plans together. Build and review emergency response pre-plans with StationOne."
+  heading="Know the site before your crew arrives."
+  introduction="Bring site details, hazards, contacts and response information into one pre-plan. Give your emergency response team a shared reference for the places and risks they need to understand."
+  benefits={[
+    'Site information in a shared reference',
+    'Hazards and isolation points on the map',
+    'Review cycles to help keep plans current',
+  ]}
+  image={{
+    src: preplanImage,
+    alt: 'StationOne pre-plan showing site utilities, fire suppression details and map markers',
+    caption: 'Bring site details and mapped resources together in a pre-plan.',
+  }}
+  workflow={{
+    title: 'Build a plan your team can keep current',
+    description:
+      'Work with site stakeholders to gather the details, map the risks and maintain a useful shared record.',
+    steps: [
       {
-        title: 'Site Documentation',
+        title: 'Capture the site',
         description:
-          'Record facility details including company name, address, GPS coordinates, occupancy numbers, operational hours, and emergency contacts.',
-        icon: 'tabler:building',
+          'Record contacts, occupancy, building details and supporting documents with input from the people who know the location.',
       },
       {
-        title: 'Building Details',
+        title: 'Map the critical details',
         description:
-          'Document building names, dimensions (length, width, height), construction materials, assembly areas, and plant room locations.',
-        icon: 'tabler:dimensions',
+          'Locate hazards, isolation points and relevant site features, supported by photos and floor plans.',
       },
       {
-        title: 'Hazardous Materials Tracking',
+        title: 'Share and review',
         description:
-          'Log dangerous goods with UN numbers, proper shipping names, hazard classifications, quantities, and storage locations linked to national databases.',
-        icon: 'tabler:biohazard',
+          'Share plans with the relevant units and use review reminders to revisit details as sites and risks change.',
       },
-      {
-        title: 'Service Isolation Points',
-        description:
-          'Map critical shutoff points for electricity, gas, water, and solar systems to enable rapid emergency response.',
-        icon: 'tabler:power',
-      },
-      {
-        title: 'Interactive Mapping',
-        description:
-          'Drag-and-drop marker positioning and polygon zones for hazmat areas, exclusion zones, and building outlines on satellite imagery.',
-        icon: 'tabler:map-pin',
-      },
-      {
-        title: 'Media Management',
-        description:
-          'Attach site photos, floor plans, and fire service documents with descriptions and source tracking.',
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'Automated Review Cycles',
-        description: '12-month review cycles with automated reminders to ensure pre-plans stay current and accurate.',
-        icon: 'tabler:calendar-repeat',
-      },
-      {
-        title: 'Secure Sharing',
-        description:
-          'Share pre-plans across units within organizations and publish to public brigade pages with restricted access to sensitive data.',
-        icon: 'tabler:lock',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Call to Action -->
-  <CallToAction
-    callToAction={{
-      text: 'Start Your Free Trial',
-      href: 'https://app.stationone.com.au/register',
-      icon: 'tabler:rocket',
-    }}
-    callToAction2={{
-      text: 'Contact Sales',
-      href: '/#contact',
-    }}
-  >
-    <Fragment slot="title">Ready to improve your pre-planning?</Fragment>
-
-    <Fragment slot="subtitle">
-      Join fire services using StationOne to build comprehensive pre-plans, collaborate with stakeholders, and arm crews
-      with critical information before they arrive on scene.
-    </Fragment>
-  </CallToAction>
-</Layout>
+    ],
+  }}
+  capabilities={[
+    {
+      title: 'Keep site contacts and details together',
+      description: 'Record addresses, coordinates, occupancy, operating hours and emergency contacts in one reference.',
+      icon: 'tabler:building',
+    },
+    {
+      title: 'Document the built environment',
+      description: 'Capture building dimensions, construction materials, assembly areas and plant room locations.',
+      icon: 'tabler:dimensions',
+    },
+    {
+      title: 'Record dangerous goods',
+      description:
+        'Document UN numbers, shipping names, hazard classifications, quantities and storage locations for hazardous materials.',
+      icon: 'tabler:biohazard',
+    },
+    {
+      title: 'Locate isolation points',
+      description:
+        'Map electricity, gas, water and solar isolation points so their locations are documented with the site.',
+      icon: 'tabler:power',
+    },
+    {
+      title: 'Put risks on the map',
+      description:
+        'Position markers and draw zones for hazardous materials, exclusion areas and building outlines on satellite imagery.',
+      icon: 'tabler:map-pin',
+    },
+    {
+      title: 'Attach visual references',
+      description: 'Store site photos, floor plans and supporting documents with descriptions and source information.',
+      icon: 'tabler:photo',
+    },
+    {
+      title: 'Keep reviews on the agenda',
+      description: 'Use annual review cycles and automated reminders to prompt a check of existing plan details.',
+      icon: 'tabler:calendar-repeat',
+    },
+    {
+      title: 'Share with relevant teams',
+      description:
+        'Share plans across units within your organisation, with controls for sensitive information when publishing to public pages.',
+      icon: 'tabler:lock',
+    },
+  ]}
+  questions={[
+    {
+      title: 'What can we include in a pre-plan?',
+      description:
+        'Site and building details, emergency contacts, hazardous materials, isolation points, map markers, photos, floor plans and supporting documents can be kept together.',
+    },
+    {
+      title: 'Can we mark hazards and isolation points on a map?',
+      description:
+        'Yes. Interactive mapping supports markers and polygon zones, helping your team locate relevant features and areas.',
+    },
+    {
+      title: 'How do we keep plans up to date?',
+      description:
+        'Annual review cycles and automated reminders prompt your team to revisit a plan. Your team remains responsible for checking and updating its information.',
+    },
+    {
+      title: 'Can multiple units use the same plan?',
+      description:
+        'Plans can be shared across units within your organisation. We can walk through sharing options and sensitive information controls for your requirements.',
+    },
+  ]}
+  related={[
+    {
+      title: 'Inspections & audits',
+      description: 'Capture equipment checks and retain the findings and supporting evidence in a structured record.',
+      href: '/features/inspections',
+    },
+    {
+      title: 'Actions & tasks',
+      description: 'Assign follow-up work and track it from an open action through to verified completion.',
+      href: '/features/actions',
+    },
+  ]}
+/>

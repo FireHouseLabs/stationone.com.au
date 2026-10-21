@@ -1,109 +1,147 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-const metadata = {
-  title: 'Inspections & Templates - StationOne',
-  description:
-    'Streamline your vehicle, equipment, and asset inspections with customisable templates, automated scoring, and comprehensive compliance tracking.',
-};
+import { Image } from 'astro:assets';
+import inspectionImage from '~/assets/images/inspection-in-progress.png';
+import dashboardImage from '~/assets/images/inspections-dashboard.png';
+import FeaturePage from '~/components/widgets/FeaturePage.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 ---
 
-<Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <Hero
-    callToAction={{ text: 'Start Free Trial', href: 'https://app.stationone.com.au/register', icon: 'tabler:rocket' }}
-    callToAction2={{ text: 'Learn More', href: '#features' }}
-  >
-    <Fragment slot="title">
-      Streamline Your <span class="text-secondary dark:text-white highlight">Inspections</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        StationOne's inspection system powers your preventive maintenance capabilities with customisable templates,
-        automated scoring, and comprehensive audit trails. Keep your vehicles, equipment, and assets ready when you need
-        them most.
-      </span>
-    </Fragment>
-  </Hero>
-
-  <!-- Core Capabilities -->
-  <Features2
-    id="features"
-    title="Powerful Inspection Features"
-    subtitle="Everything you need to maintain compliance and ensure equipment readiness"
-    tagline="Core Capabilities"
-    items={[
+<FeaturePage
+  name="Inspections & audits"
+  title="Equipment Inspections & Audit Records for Emergency Teams"
+  description="Complete vehicle and equipment inspections with customisable checklists, photos and signatures. Turn failed checks into tracked actions with StationOne."
+  heading="Make every equipment check count."
+  introduction="Replace disconnected checklists with inspections your team can complete, review and act on. Capture equipment condition, document findings and connect failed checks to follow-up work."
+  benefits={[
+    'Consistent checks across your equipment',
+    'Photos and signatures with the record',
+    'Failed checks connected to follow-up actions',
+  ]}
+  image={{
+    src: inspectionImage,
+    alt: 'StationOne inspection in progress showing checklist sections, progress and Present or Missing responses',
+    caption: 'Work through a vehicle checklist section by section, with progress and notes alongside each check.',
+  }}
+  workflow={{
+    title: 'From a routine check to a record you can use',
+    description: 'Keep the inspection, the evidence and any follow-up work connected.',
+    steps: [
       {
-        title: 'Automated Scoring & Pass/Fail',
+        title: 'Complete the right checklist',
+        description: 'Use a template suited to the vehicle, equipment or asset being checked and record each result.',
+      },
+      {
+        title: 'Document what you find',
         description:
-          'Inspections automatically calculate results using an 80% threshold. Failed items trigger automatic maintenance action generation.',
-        icon: 'tabler:checks',
+          'Add photos and signatures to support the record, and use supervisor review where your process requires it.',
       },
       {
-        title: 'Flexible Inspection Types',
+        title: 'Follow through on failed items',
         description:
-          'Support for vehicles, equipment, tools, safety gear, mounted equipment, and hydrants with customisable checklists.',
-        icon: 'tabler:adjustments',
+          'Failed items generate maintenance actions, with inspection history available for later review and reporting.',
       },
-      {
-        title: 'QR Code Public Access',
-        description:
-          'Enable public inspections via QR codes for external stakeholders and non-members to conduct checks without authentication.',
-        icon: 'tabler:qrcode',
-      },
-      {
-        title: 'Photo & Signature Capture',
-        description: 'Attach photos and digital signatures directly to inspection items for complete documentation.',
-        icon: 'tabler:camera',
-      },
-      {
-        title: 'Draft Auto-Saving',
-        description: 'Never lose your work with automatic draft saving during inspections. Resume where you left off.',
-        icon: 'tabler:device-floppy',
-      },
-      {
-        title: 'Supervisor Review',
-        description: 'Optional supervisor review workflow ensures quality control and accountability.',
-        icon: 'tabler:user-check',
-      },
-      {
-        title: 'Complete Audit Trail',
-        description: 'Access full inspection history with detailed audit trails for compliance reporting and analysis.',
-        icon: 'tabler:history',
-      },
-      {
-        title: 'Scheduled Inspections',
-        description: 'Set up recurring inspection schedules to ensure routine maintenance never gets missed.',
-        icon: 'tabler:calendar-event',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Call to Action -->
-  <CallToAction
-    callToAction={{
-      text: 'Start Your Free Trial',
-      href: 'https://app.stationone.com.au/register',
-      icon: 'tabler:rocket',
-    }}
-    callToAction2={{
-      text: 'Contact Sales',
-      href: '/#contact',
-    }}
-  >
-    <Fragment slot="title">Ready to streamline your inspections?</Fragment>
-
-    <Fragment slot="subtitle">
-      Join fire services already using StationOne to maintain compliance, improve equipment readiness, and reduce
-      administrative burden.
-    </Fragment>
-  </CallToAction>
-</Layout>
+    ],
+  }}
+  capabilities={[
+    {
+      title: 'Use equipment-specific templates',
+      description: 'Build checklists for vehicles, equipment, tools, safety gear, mounted equipment and hydrants.',
+      icon: 'tabler:adjustments',
+    },
+    {
+      title: 'Turn results into follow-up',
+      description:
+        'Calculate inspection results and create maintenance actions from failed items, connecting the check to the work it identifies.',
+      icon: 'tabler:checks',
+    },
+    {
+      title: 'Capture supporting evidence',
+      description: 'Attach photos and digital signatures to document findings alongside the inspection record.',
+      icon: 'tabler:camera',
+    },
+    {
+      title: 'Resume draft inspections',
+      description: 'Automatic draft saving lets members return to an inspection they have started.',
+      icon: 'tabler:device-floppy',
+    },
+    {
+      title: 'Include supervisor review',
+      description: 'Use an optional review stage when your team needs oversight before an inspection is finalised.',
+      icon: 'tabler:user-check',
+    },
+    {
+      title: 'Keep inspection history accessible',
+      description: 'Review previous inspections and audit trails to support reporting and follow-up decisions.',
+      icon: 'tabler:history',
+    },
+    {
+      title: 'Schedule recurring checks',
+      description: 'Set up routine inspection schedules to help your team keep track of checks that are due.',
+      icon: 'tabler:calendar-event',
+    },
+    {
+      title: 'Provide QR code access',
+      description:
+        'Enable public inspection access where appropriate so external stakeholders can complete checks without an account.',
+      icon: 'tabler:qrcode',
+    },
+  ]}
+  questions={[
+    {
+      title: 'Can we use different checklists for different equipment?',
+      description:
+        'Yes. Customisable templates support different asset and equipment types, so the checks can reflect what your team is inspecting.',
+    },
+    {
+      title: 'What happens when an item fails?',
+      description:
+        'Failed inspection items trigger maintenance actions so the issue can be assigned and tracked beyond the inspection itself.',
+    },
+    {
+      title: 'Can a supervisor review an inspection?',
+      description: 'Yes. An optional supervisor review workflow supports teams that need an additional review stage.',
+    },
+    {
+      title: 'Can someone complete an inspection without an account?',
+      description:
+        'Public inspections can be enabled through QR codes for external stakeholders and non-members. We can discuss which checks should use this access during a walkthrough.',
+    },
+  ]}
+  related={[
+    {
+      title: 'Actions & tasks',
+      description:
+        'See how inspection findings become assigned work, with progress and verification tracked in one place.',
+      href: '/features/actions',
+    },
+    {
+      title: 'Calendar & events',
+      description: 'Coordinate training, events and shared resources across your team.',
+      href: '/features/calendar',
+    },
+  ]}
+>
+  <Fragment slot="details">
+    <WidgetWrapper id="inspection-dashboard" containerClass="max-w-5xl">
+      <Headline
+        tagline="Oversight for your team"
+        title="See what needs your attention"
+        subtitle="Review inspection activity, quality indicators and overdue schedules from the inspection dashboard, with links to the records that need follow-up."
+      />
+      <figure class="mx-auto max-w-4xl">
+        <Image
+          src={dashboardImage}
+          alt="StationOne inspection dashboard showing monthly activity, open actions, inspection quality and overdue schedules"
+          widths={[400, 800, 1008]}
+          sizes="(max-width: 928px) calc(100vw - 32px), 896px"
+          format="png"
+          class="mx-auto h-auto w-full rounded-xl"
+        />
+        <figcaption class="mt-3 text-center text-sm text-muted">
+          A shared view of inspection activity, follow-up actions and scheduled checks that are overdue.
+        </figcaption>
+      </figure>
+    </WidgetWrapper>
+  </Fragment>
+</FeaturePage>

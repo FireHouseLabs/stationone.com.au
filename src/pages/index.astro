@@ -7,10 +7,14 @@ import Features2 from '~/components/widgets/Features2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Contact from '~/components/widgets/Contact.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'StationOne - Streamline your firefighting operations.',
+  title: 'StationOne - Keep your emergency teams ready.',
+  description:
+    'Manage inspections, equipment, qualifications and actions in one platform built for mining, industry and government emergency response teams.',
   dontUseTitleTemplate: true,
 };
 ---
@@ -24,18 +28,16 @@ const metadata = {
       href: 'https://app.stationone.com.au/demo',
       icon: 'tabler:firetruck',
     }}
-    callToAction2={{ text: 'Contact us', href: '#contact' }}
+    callToAction2={{ text: 'Request a walkthrough', href: '/?enquiry=walkthrough#contact' }}
     image={{ src: import('~/assets/images/hero-image.png'), alt: 'StationOne Hero Image' }}
   >
     <Fragment slot="title">
-      The only management platform built for
-      <span class="text-secondary dark:text-white highlight">emergency response</span> across mining, industry and
-      government.
+      Keep your <span class="text-secondary dark:text-white highlight">emergency teams ready.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Inspections, asset registers, equipment maintenance, training, and crew development. StationOne turns every part
-      of your admin into tracked, actioned, compliant records, on any device, for every member of your team.
+      Manage inspections, equipment, qualifications and actions in one platform built for mining, industry and
+      government emergency response teams.
     </Fragment>
 
     <Fragment slot="content">
@@ -44,6 +46,36 @@ const metadata = {
       </p>
     </Fragment>
   </Hero>
+
+  <!-- Overview Video **************** -->
+
+  <WidgetWrapper id="overview" containerClass="max-w-5xl">
+    <Headline
+      tagline="Platform overview"
+      title="See how StationOne brings it all together"
+      subtitle="Watch our overview to explore how StationOne helps you manage your emergency response operations."
+    />
+    <div
+      class="aspect-video overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10 dark:ring-white/10"
+    >
+      <iframe
+        class="h-full w-full"
+        src="https://www.youtube-nocookie.com/embed/CmfXw5UIxyE"
+        title="StationOne platform overview"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <p class="mt-4 text-center text-sm text-muted">
+      <a
+        class="underline underline-offset-4 hover:text-primary dark:hover:text-white"
+        href="https://youtu.be/CmfXw5UIxyE"
+        target="_blank"
+        rel="noopener noreferrer">Watch on YouTube</a
+      >
+    </p>
+  </WidgetWrapper>
 
   <!-- Features Widget *************** -->
 
@@ -91,6 +123,52 @@ const metadata = {
       },
     ]}
   />
+
+  <WidgetWrapper id="workflow" containerClass="max-w-6xl">
+    <Headline
+      tagline="From inspection to resolution"
+      title="Find it. Assign it. Get it done."
+      subtitle="Keep equipment faults moving towards resolution, with a clear record of what happened and who took action."
+    />
+    <ol class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        [
+          {
+            title: 'Inspect equipment',
+            description:
+              'Complete a checklist on your phone, tablet or computer and record the condition of your equipment.',
+          },
+          {
+            title: 'Report a fault',
+            description:
+              'Capture the issue while it is in front of you, with photos and details to help the team respond.',
+          },
+          {
+            title: 'Assign an action',
+            description: 'Give someone responsibility for the follow-up and track progress in one place.',
+          },
+          {
+            title: 'Verify completion',
+            description: 'Review the work before closing the action, keeping the history available for reporting.',
+          },
+        ].map((step, index) => (
+          <li class="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+            <span
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white font-bold"
+              aria-hidden="true"
+            >
+              {index + 1}
+            </span>
+            <h3 class="mb-3 text-xl font-bold">{step.title}</h3>
+            <p class="text-muted">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="mt-8 text-center">
+      <a href="https://app.stationone.com.au/demo" class="btn btn-primary">Explore the interactive demo</a>
+    </div>
+  </WidgetWrapper>
 
   <!-- Demo CTA Widget ******************* -->
 
@@ -189,6 +267,50 @@ const metadata = {
     </Fragment>
   </CallToAction>
 
+  <WidgetWrapper id="getting-started" containerClass="max-w-5xl">
+    <Headline
+      tagline="Getting started"
+      title="A clear path from your current records to StationOne"
+      subtitle="We’ll work through your requirements with you, from the first walkthrough to getting your team comfortable with the platform."
+    />
+    <ol class="grid gap-8 md:grid-cols-3">
+      {
+        [
+          {
+            title: 'Talk us through your operations',
+            description:
+              'Request a walkthrough focused on your sites, crews and current processes. We’ll discuss the right setup and pricing for your organisation.',
+          },
+          {
+            title: 'Plan your setup and data import',
+            description:
+              'We’ll help you work through existing spreadsheets and records, agree what needs to move, and plan how your sites and teams will be organised.',
+          },
+          {
+            title: 'Bring your team on board',
+            description:
+              'Get onboarding support and guidance so your team can start using StationOne for day-to-day inspections, equipment records and actions.',
+          },
+        ].map((step, index) => (
+          <li>
+            <p class="mb-3 text-primary font-bold">Step {index + 1}</p>
+            <h3 class="mb-3 text-xl font-bold">{step.title}</h3>
+            <p class="text-muted">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="mt-10 text-center">
+      <a href="/?enquiry=walkthrough#contact" class="btn btn-primary">Request a walkthrough</a>
+      <p class="mt-4 text-sm text-muted">
+        An independent volunteer brigade? <a
+          href="https://app.stationone.com.au/register"
+          class="underline underline-offset-4">Sign up directly</a
+        >.
+      </p>
+    </div>
+  </WidgetWrapper>
+
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -243,7 +365,7 @@ const metadata = {
   <Contact
     id="contact"
     tagline="Get in Touch"
-    title="Contact StationOne"
-    subtitle="Do you want to know more about StationOne? Have questions or feedback on StationOne features? Interested in investing? Let's talk!"
+    title="Let’s talk about your team"
+    subtitle="Tell us about your organisation and what you need to manage. Request a walkthrough, ask about pricing, or talk through your requirements with us."
   />
 </Layout>

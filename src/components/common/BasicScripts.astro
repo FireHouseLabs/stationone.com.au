@@ -33,7 +33,10 @@ import { UI_CONFIG } from '~/utils/config';
 
   function trackEvent(name, params) {
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(['event', name, params || {}]);
+    // Match gtag's command format, including when analytics runs through Partytown.
+    (function () {
+      window.dataLayer.push(arguments);
+    })('event', name, params || {});
   }
 
   window.onload = function () {
@@ -119,10 +122,67 @@ import { UI_CONFIG } from '~/utils/config';
       }
     });
 
-    const formNames = { '6Ajgm4vd': 'contact', qG9iiQ47: 'waitlist' };
-    attachEvent('form[action^="https://submit-form.com/"]', 'submit', function (_, elem) {
-      const formKey = elem.action.split('/').pop();
-      trackEvent('generate_lead', { form_id: formNames[formKey] || formKey });
+    const enquiryForm = document.querySelector('[data-enquiry-form]');
+    if (enquiryForm) {
+      const reason = enquiryForm.querySelector('[name="reason"]');
+      const selectEnquiry = (value) => {
+        if (['walkthrough', 'pricing'].includes(value)) reason.value = value;
+      };
+      selectEnquiry(new URLSearchParams(window.location.search).get('enquiry'));
+      attachEvent('a[href*="enquiry="]', 'click', function (_, elem) {
+        selectEnquiry(new URL(elem.href).searchParams.get('enquiry'));
+      });
+      let submitting = false;
+      enquiryForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        if (submitting) return;
+        submitting = true;
+        const button = enquiryForm.querySelector('[type="submit"]');
+        const status = enquiryForm.querySelector('[data-enquiry-status]');
+        button.disabled = true;
+        button.textContent = 'Sending…';
+        status.textContent = 'Sending your enquiry…';
+        enquiryForm.setAttribute('aria-busy', 'true');
+        try {
+          if (!window.Botpoison) throw new Error('Spam protection unavailable');
+          const botpoison = new window.Botpoison({ publicKey: enquiryForm.dataset.enquiryPublicKey });
+          const { solution } = await botpoison.challenge();
+          const payload = Object.fromEntries(new FormData(enquiryForm));
+          const response = await fetch(enquiryForm.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ ...payload, _botpoison: solution }),
+            signal: AbortSignal.timeout(30000),
+          });
+          if (!response.ok) throw new Error('Enquiry rejected');
+          trackEvent('generate_lead', { form_id: 'contact', enquiry_type: payload.reason });
+          enquiryForm.reset();
+          status.textContent = 'Thanks for your enquiry. We’ll be in touch to discuss your team’s needs.';
+          status.focus();
+        } catch {
+          status.textContent =
+            'Your enquiry could not be confirmed. Please try again, or email hello@stationone.com.au.';
+          status.focus();
+        } finally {
+          submitting = false;
+          button.disabled = false;
+          button.textContent = 'Send enquiry';
+          enquiryForm.removeAttribute('aria-busy');
+        }
+      });
+    }
+
+    attachEvent('a[href*="enquiry=walkthrough"]', 'click', function () {
+      trackEvent('select_content', { content_type: 'cta', item_id: 'request_walkthrough' });
+    });
+    attachEvent('a[href*="enquiry=pricing"]', 'click', function () {
+      trackEvent('select_content', { content_type: 'cta', item_id: 'request_pricing' });
+    });
+    attachEvent('a[href^="tel:"], a[href^="mailto:"]', 'click', function (_, elem) {
+      trackEvent('select_content', {
+        content_type: 'cta',
+        item_id: elem.href.startsWith('tel:') ? 'contact_phone' : 'contact_email',
+      });
     });
 
     attachEvent('a[href^="https://app.stationone.com.au/register"]', 'click', function () {
@@ -130,10 +190,10 @@ import { UI_CONFIG } from '~/utils/config';
     });
 
     attachEvent('a[href^="https://app.stationone.com.au/demo"]', 'click', function () {
-      trackEvent('select_content', { content_type: 'cta', item_id: 'book_demo' });
+      trackEvent('select_content', { content_type: 'cta', item_id: 'interactive_demo' });
     });
 
-    attachEvent('a[href^="https://stationone.canny.io"]', 'click', function () {
+    attachEvent('a[href^="https://stationone.userjot.com"]', 'click', function () {
       trackEvent('select_content', { content_type: 'cta', item_id: 'feedback_board' });
     });
   };

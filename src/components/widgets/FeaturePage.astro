@@ -1,0 +1,157 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import type { ImageMetadata } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+interface Item {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface Props {
+  name: string;
+  title: string;
+  description: string;
+  heading: string;
+  introduction: string;
+  benefits: Array<string>;
+  capabilities: Array<Item>;
+  workflow: { title: string; description: string; steps: Array<Item> };
+  questions: Array<Item>;
+  related: Array<{ title: string; description: string; href: string }>;
+  image?: { src: ImageMetadata; alt: string; caption: string };
+}
+
+const { name, title, description, heading, introduction, benefits, capabilities, workflow, questions, related, image } =
+  Astro.props;
+---
+
+<Layout metadata={{ title, description }}>
+  <section class="relative px-4 pt-8 pb-12 md:px-6 md:pb-16">
+    <div class="mx-auto max-w-6xl">
+      <nav aria-label="Breadcrumb" class="mb-10 text-sm text-muted">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a href="/" class="hover:underline">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/#details" class="hover:underline">Features</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">{name}</li>
+        </ol>
+      </nav>
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mb-3 font-bold uppercase tracking-wide text-secondary dark:text-blue-200">{name}</p>
+        <h1 class="mb-6 font-heading text-4xl font-bold tracking-tight md:text-6xl">{heading}</h1>
+        <p class="mx-auto max-w-3xl text-xl text-muted">{introduction}</p>
+        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <a href="https://app.stationone.com.au/demo" class="btn btn-primary">
+            <Icon name="tabler:player-play" class="mr-2 h-5 w-5" />Try interactive demo
+          </a>
+          <a href="/?enquiry=walkthrough#contact" class="btn">Request a walkthrough</a>
+        </div>
+        <p class="mt-4 text-sm text-muted">
+          Explore the demo without signing up, or talk through your team’s requirements.
+        </p>
+      </div>
+      <ul class="mt-10 grid gap-4 md:grid-cols-3">
+        {
+          benefits.map((benefit) => (
+            <li class="flex items-start gap-3 rounded-xl bg-blue-50 p-5 dark:bg-slate-800">
+              <Icon name="tabler:check" class="mt-0.5 h-5 w-5 shrink-0 text-primary dark:text-blue-200" />
+              <span class="font-semibold">{benefit}</span>
+            </li>
+          ))
+        }
+      </ul>
+      {
+        image && (
+          <figure class="mx-auto mt-12 max-w-4xl">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              widths={Array.from(new Set([400, Math.min(800, image.src.width), image.src.width]))}
+              sizes="(max-width: 928px) calc(100vw - 32px), 896px"
+              format="png"
+              class="mx-auto h-auto w-full rounded-xl"
+            />
+            <figcaption class="mt-3 text-center text-sm text-muted">{image.caption}</figcaption>
+          </figure>
+        )
+      }
+    </div>
+  </section>
+
+  <WidgetWrapper id="workflow" containerClass="max-w-6xl">
+    <Headline tagline="How it works" title={workflow.title} subtitle={workflow.description} />
+    <ol class="grid gap-6 md:grid-cols-3">
+      {
+        workflow.steps.map((step, index) => (
+          <li class="rounded-xl border border-slate-200 p-6 dark:border-slate-700">
+            <p class="mb-3 font-bold text-primary dark:text-blue-200">Step {index + 1}</p>
+            <h3 class="mb-3 text-xl font-bold">{step.title}</h3>
+            <p class="text-muted">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </WidgetWrapper>
+
+  <Features2
+    id="features"
+    tagline="Built for your team"
+    title={`What you can do with ${name.toLowerCase()}`}
+    subtitle="Tools for the people doing the work and the people responsible for keeping it on track."
+    items={capabilities}
+  >
+    <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </Features2>
+
+  <slot name="details" />
+
+  <FAQs tagline="Common questions" title={`${name}: your questions answered`} items={questions} />
+
+  <WidgetWrapper containerClass="max-w-5xl">
+    <Headline tagline="Connected operations" title="See how it fits with the rest of StationOne" />
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        related.map((item) => (
+          <a
+            href={item.href}
+            class="group rounded-xl border border-slate-200 p-6 transition-colors hover:border-primary dark:border-slate-700 dark:hover:border-blue-300"
+          >
+            <h3 class="mb-3 flex items-center justify-between gap-3 text-xl font-bold">
+              {item.title}
+              <Icon name="tabler:arrow-right" class="h-5 w-5 shrink-0 text-primary dark:text-blue-200" />
+            </h3>
+            <p class="text-muted">{item.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </WidgetWrapper>
+
+  <WidgetWrapper containerClass="max-w-5xl">
+    <div class="rounded-2xl bg-blue-50 p-6 text-center md:p-12 dark:bg-slate-800">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">See how {name.toLowerCase()} could work for your team</h2>
+      <p class="mx-auto max-w-2xl text-lg text-muted">
+        Tell us about your sites, crews and current processes. We’ll walk through the relevant features and discuss
+        setup, data import and organisation pricing.
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="/?enquiry=walkthrough#contact" class="btn btn-primary">Request a walkthrough</a>
+        <a href="/?enquiry=pricing#contact" class="btn">Discuss organisation pricing</a>
+      </div>
+      <p class="mt-6 text-sm text-muted">
+        An independent volunteer brigade? <a
+          href="https://app.stationone.com.au/register"
+          class="font-semibold underline underline-offset-4">Sign up directly</a
+        >.
+      </p>
+    </div>
+  </WidgetWrapper>
+</Layout>
