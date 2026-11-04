@@ -8,7 +8,7 @@ export const headerData = {
   links: [
     {
       text: 'About',
-      href: getPermalink('/#features'),
+      href: getPermalink('/about'),
     },
     {
       text: 'Features',
@@ -55,7 +55,7 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: getPermalink('/#features'), bold: true },
+        { text: 'About', href: getPermalink('/about'), bold: true },
         { text: 'Pricing', href: getPermalink('/pricing'), bold: true },
         { text: 'Contact', href: getPermalink('/#contact'), bold: true },
       ],
