@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
@@ -14,7 +16,7 @@ import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 const metadata = {
   title: 'StationOne - Keep your emergency teams ready.',
   description:
-    'Manage inspections, equipment, qualifications and actions in one platform built for mining, industry and government emergency response teams.',
+    'Never miss an inspection, compliance date or crew endorsement. StationOne keeps equipment, qualifications and actions in one platform, built by emergency services professionals for mining, industry and government teams.',
   dontUseTitleTemplate: true,
 };
 ---
@@ -36,44 +38,79 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Manage inspections, equipment, qualifications and actions in one platform built for mining, industry and
-      government emergency response teams.
+      Missed inspections, lapsed endorsements and faults nobody followed up. StationOne keeps your equipment, crews and
+      compliance on track, in one platform built for mining, industry and government emergency response teams.
     </Fragment>
 
     <Fragment slot="content">
       <p class="text-sm text-muted mt-6 dark:text-slate-400">
-        Trusted by emergency services across Australia. Enterprise deployments with custom pricing.
+        Built by firefighters and emergency services professionals.
+        <a href="/about" class="underline underline-offset-4 hover:text-primary dark:hover:text-white">Read our story</a
+        >. Enterprise deployments with custom pricing.
       </p>
     </Fragment>
   </Hero>
 
-  <!-- Overview Video **************** -->
+  <!-- The problem ******************* -->
 
-  <WidgetWrapper id="overview" containerClass="max-w-5xl">
+  <WidgetWrapper id="problem" containerClass="max-w-6xl">
     <Headline
-      tagline="Platform overview"
-      title="See how StationOne brings it all together"
-      subtitle="Watch our overview to explore how StationOne helps you manage your emergency response operations."
+      tagline="The cost of getting it wrong"
+      title="What happens when readiness lives in spreadsheets and paper forms"
+      subtitle="Most emergency response teams are capable and committed. The risk sits in the admin behind them: compliance dates that are missed, requirements nobody realised applied, and records that are out of date, scattered or impossible to check quickly."
     />
-    <div
-      class="aspect-video overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10 dark:ring-white/10"
-    >
-      <iframe
-        class="h-full w-full"
-        src="https://www.youtube-nocookie.com/embed/CmfXw5UIxyE"
-        title="StationOne platform overview"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {
+        [
+          {
+            icon: 'tabler:alert-triangle',
+            title: 'Faults are reported but never closed',
+            description:
+              'A defect is noted on a form, and nobody is sure who was meant to follow it up. The equipment either stays in service with a known defect or sits off the road, with no clear record either way.',
+          },
+          {
+            icon: 'tabler:calendar-off',
+            title: 'Equipment inspections and compliance dates are missed',
+            description:
+              'Inspection schedules, servicing and testing dates are tracked in different places, or not at all. Gaps only surface when someone goes looking, often right before an audit.',
+          },
+          {
+            icon: 'tabler:certificate-off',
+            title: 'Crew qualifications and endorsements expire unnoticed',
+            description:
+              'It is hard to see at a glance who is current and who is not. A lapsed endorsement is easy to miss until it affects who can be rostered or respond.',
+          },
+          {
+            icon: 'tabler:help-circle',
+            title: 'Nobody is sure what is due, or what applies',
+            description:
+              'Requirements change by site, asset and role. Without one clear view, teams can be unaware of an obligation until it has already been missed.',
+          },
+          {
+            icon: 'tabler:file-search',
+            title: 'There is no trusted record when you need one',
+            description:
+              'After an incident, an audit or a review, you are piecing together what was checked, by whom and when, from documents that may not agree.',
+          },
+          {
+            icon: 'tabler:user-off',
+            title: 'Knowledge sits with one person',
+            description:
+              'One person’s spreadsheet becomes the system. When they move on, take leave or step back, the history goes with them.',
+          },
+        ].map((item) => (
+          <div class="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+            <Icon name={item.icon} class="mt-1 h-8 w-8 flex-shrink-0 text-primary dark:text-blue-300" />
+            <div>
+              <h3 class="mb-2 text-xl font-bold">{item.title}</h3>
+              <p class="text-muted">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
     </div>
-    <p class="mt-4 text-center text-sm text-muted">
-      <a
-        class="underline underline-offset-4 hover:text-primary dark:hover:text-white"
-        href="https://youtu.be/CmfXw5UIxyE"
-        target="_blank"
-        rel="noopener noreferrer">Watch on YouTube</a
-      >
+    <p class="mt-8 text-center text-lg font-semibold">
+      StationOne gives every inspection, fault, action and qualification one place to live, with a clear history.
     </p>
   </WidgetWrapper>
 
@@ -81,48 +118,49 @@ const metadata = {
 
   <Features
     id="features"
-    tagline="Benefits of Using StationOne"
-    title="Why emergency services choose StationOne"
-    subtitle="StationOne helps emergency services work smarter, not harder. Giving you more time to focus on protecting your people, plant, infrastructure and community."
+    tagline="What changes with StationOne"
+    title="Nothing slips through the cracks"
+    subtitle="Equipment, crews and compliance requirements live in one place, with everyone working from the same data. Your team can focus on protecting people, plant, infrastructure and community."
     items={[
       {
-        title: 'Save Time',
+        title: 'Never miss a due date',
         description:
-          'Reduce hours spent on paperwork, manual tracking, and administrative tasks. Focus on what matters most; protecting your people, plant, infrastructure and community.',
-        icon: 'tabler:clock',
+          'Automated tracking and reminders for inspections, servicing and compliance deadlines, so the next one is never a surprise.',
+        icon: 'tabler:calendar-check',
       },
       {
-        title: 'Improve Safety',
-        description:
-          'Ensure crews have accurate, up-to-date information when it matters most. Better data means better decisions on the incident ground.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Stay Compliant',
-        description:
-          'Never miss an inspection, qualification expiry, or compliance deadline. Automated tracking and reminders keep your teams audit-ready.',
+        title: 'Know who is current',
+        description: 'See crew qualifications and endorsements at a glance, with expiries flagged before they lapse.',
         icon: 'tabler:certificate',
       },
       {
-        title: 'Real-Time Access',
+        title: 'Close the loop on faults',
         description:
-          'Access critical information from anywhere: station, vehicle, or incident scene. Works offline and syncs when connected.',
+          'Every fault gets an owner, a status and a record, from the first report through to verified completion.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Audit-ready on demand',
+        description:
+          'Produce a clear history of inspections, actions and qualifications whenever an auditor, manager or review asks.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Works where you do',
+        description:
+          'Access critical information from the station, vehicle or incident scene. Works offline and syncs when connected.',
         icon: 'tabler:cloud',
       },
       {
-        title: 'Reduce Admin Burden',
+        title: 'Less admin, more readiness',
         description:
-          'Eliminate duplicate data entry and paper-based processes. People spend less time on admin and more time on training and operations.',
+          'Eliminate duplicate data entry and paper-based processes, so people spend more time on training and operations.',
         icon: 'tabler:file-minus',
-      },
-      {
-        title: 'Single Source of Truth',
-        description:
-          'No more information silos or outdated spreadsheets. Everyone works from the same data, ensuring consistency across your organisation.',
-        icon: 'tabler:database',
       },
     ]}
   />
+
+  <!-- Workflow ******************* -->
 
   <WidgetWrapper id="workflow" containerClass="max-w-6xl">
     <Headline
@@ -170,6 +208,134 @@ const metadata = {
     </div>
   </WidgetWrapper>
 
+  <!-- Founders / experience ******************* -->
+
+  <WidgetWrapper id="founders" containerClass="max-w-5xl">
+    <Headline
+      tagline="Our experience"
+      title="Built by people who understand the job"
+      subtitle="StationOne was designed by emergency services professionals, including firefighters and former officers, who have lived the problems it solves."
+    />
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        [
+          {
+            name: 'Jeremy West',
+            role: 'Co-Founder and CTO',
+            photo: '/assets/jeremy.jpeg',
+            description:
+              'Operational firefighter, former Captain and Deputy Group Officer, with 12 years of volunteer emergency services experience and 15+ years building software.',
+          },
+          {
+            name: 'Jason Bramston',
+            role: 'Co-Founder and Chief R&D Officer',
+            photo: '/assets/jason.png',
+            description:
+              '20+ years in emergency services across professional and private sectors, designing solutions tailored to diverse environments.',
+          },
+        ].map((person) => (
+          <div class="flex items-center gap-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+            <img
+              src={person.photo}
+              alt={person.name}
+              width="96"
+              height="96"
+              loading="lazy"
+              class="h-24 w-24 flex-shrink-0 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="text-lg font-bold">{person.name}</h3>
+              <p class="mb-2 text-sm font-semibold text-primary dark:text-blue-300">{person.role}</p>
+              <p class="text-muted">{person.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a href="/about" class="btn btn-primary">Read our story</a>
+    </div>
+  </WidgetWrapper>
+
+  <!-- Market sectors ******************* -->
+
+  <WidgetWrapper id="sectors" containerClass="max-w-6xl">
+    <Headline
+      tagline="Who it's for"
+      title="Built for the teams that respond"
+      subtitle="Whether you run an emergency response team on a mine site, in a plant or across a government agency, StationOne adapts to how you are organised."
+    />
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        [
+          {
+            icon: 'tabler:building-factory-2',
+            title: 'Mining and resources',
+            description:
+              'Keep emergency response teams across multiple sites equipped, qualified and inspection-ready, with everything in one place.',
+          },
+          {
+            icon: 'tabler:building-warehouse',
+            title: 'Industry and private sector',
+            description:
+              'Manage on-site response teams, equipment checks and follow-up actions, with records you can produce when auditors ask.',
+          },
+          {
+            icon: 'tabler:building-bank',
+            title: 'Government and agencies',
+            description:
+              'Consistent records across stations, units and regions, with hosting and access options to suit your requirements.',
+          },
+          {
+            icon: 'tabler:firetruck',
+            title: 'Career and volunteer fire services',
+            description:
+              'Run inspections, hose and hydrant records, rosters and qualifications without chasing paperwork after every shift.',
+          },
+        ].map((sector) => (
+          <div class="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+            <Icon name={sector.icon} class="mb-4 h-10 w-10 text-primary dark:text-blue-300" />
+            <h3 class="mb-2 text-xl font-bold">{sector.title}</h3>
+            <p class="text-muted">{sector.description}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-8 text-center">
+      <a href="/?enquiry=walkthrough#contact" class="btn btn-primary">Talk to us about your team</a>
+    </div>
+  </WidgetWrapper>
+
+  <!-- Overview Video **************** -->
+
+  <WidgetWrapper id="overview" containerClass="max-w-5xl">
+    <Headline
+      tagline="Platform overview"
+      title="See how StationOne brings it all together"
+      subtitle="Watch our overview to explore how StationOne helps you manage your emergency response operations."
+    />
+    <div
+      class="aspect-video overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10 dark:ring-white/10"
+    >
+      <iframe
+        class="h-full w-full"
+        src="https://www.youtube-nocookie.com/embed/CmfXw5UIxyE"
+        title="StationOne platform overview"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <p class="mt-4 text-center text-sm text-muted">
+      <a
+        class="underline underline-offset-4 hover:text-primary dark:hover:text-white"
+        href="https://youtu.be/CmfXw5UIxyE"
+        target="_blank"
+        rel="noopener noreferrer">Watch on YouTube</a
+      >
+    </p>
+  </WidgetWrapper>
+
   <!-- Demo CTA Widget ******************* -->
 
   <CallToAction
@@ -184,7 +350,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Explore our interactive demo and see how StationOne can transform your emergency response operations — no sign up
+      Explore our interactive demo and see how StationOne keeps inspections, crews and compliance on track. No sign up
       required.
     </Fragment>
   </CallToAction>
@@ -192,8 +358,8 @@ const metadata = {
   <!-- Features2 Widget - Available Today ************** -->
 
   <Features2
-    title="Powerful Features for Modern Fire and Emergency Response"
-    subtitle="Everything you need to streamline operations, improve safety, and enhance collaboration across your emergency response teams."
+    title="Everything your team needs to stay on top of it"
+    subtitle="From hoses and hydrants to qualifications and pre-plans, StationOne brings your records into one platform instead of scattering them across spreadsheets and paper forms."
     tagline="Features"
     id="details"
     items={[
@@ -326,17 +492,17 @@ const metadata = {
       {
         title: 'Is StationOne suitable for industrial and government emergency response teams?',
         description:
-          'Absolutely! StationOne is designed for mining, private industry and government emergency response teams, as well as career and volunteer fire services of all sizes. Our platform helps reduce administrative burden, improve compliance tracking, and ensure critical information is always accessible when needed.',
+          'Yes. StationOne is designed for mining, private industry and government emergency response teams, as well as career and volunteer fire services of all sizes. Our platform helps reduce administrative burden, improve compliance tracking, and ensure critical information is always accessible when needed.',
       },
       {
         title: 'How secure is our data on StationOne?',
         description:
-          'Security is our top priority. StationOne uses industry-standard encryption for data in transit and at rest. We host our infrastructure on secure, enterprise-grade servers with regular backups. Access controls ensure that only authorized members can view sensitive information.',
+          'Security is our top priority. StationOne uses industry-standard encryption for data in transit and at rest. We host our infrastructure on secure, enterprise-grade servers with regular backups. Access controls ensure that only authorised members can view sensitive information.',
       },
       {
         title: 'Can we access StationOne on mobile devices in the field?',
         description:
-          "Yes! StationOne is available as a native mobile app, and the web app is fully responsive on smartphones, tablets and computers. Crews can access pre-plans, complete inspections, and update information from any device, whether they're at the station, on site or responding to an incident.",
+          "Yes. StationOne is available as a native mobile app, and the web app is fully responsive on smartphones, tablets and computers. Crews can access pre-plans, complete inspections, and update information from any device, whether they're at the station, on site or responding to an incident.",
       },
       {
         title: 'What kind of support and training do you provide?',
